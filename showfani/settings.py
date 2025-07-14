@@ -22,14 +22,18 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-^6#fzpjdmqwuzd)hb96k)
 # SECURITY WARNING: don't run with debug turned on in production!
 
 DEBUG = os.environ.get('DEBUG', 'True') == 'True'
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'showfani-backend.onrender.com']
 
+if not DEBUG:
+    # إذا كنتي عايزة تحطي أي روابط إضافية للنطاق مستقبلاً، ضيفيها هون
+    pass
 #ALLOWED_HOSTS = []
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+"""ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 if not DEBUG:
     ALLOWED_HOSTS += [os.environ.get('RENDER_EXTERNAL_HOSTNAME')]
-#............................
+#............................"""
 AUTH_USER_MODEL = 'users.CustomUser'
 
 # Application definition
@@ -90,12 +94,6 @@ WSGI_APPLICATION = 'showfani.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-"""DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}"""
 
 DATABASES = {
     'default': {
@@ -103,15 +101,17 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-if 'DATABASE_URL' in os.environ:
+
+if os.environ.get('DATABASE_URL'): # تحقق أسهل إذا المتغير موجود
     DATABASES['default'] = dj_database_url.config(
-        conn_max_age=600,  # بيحافظ على الاتصال مفتوحًا لفترة، بيحسن الأداء
-        conn_health_checks=True, # بيتحقق من صحة الاتصال
+        default=os.environ.get('DATABASE_URL'), # استخدمي default لضمان استخدام URL المتوفر
+        conn_max_age=600,
+        conn_health_checks=True,
     )
 
 # showfani/settings.py
 
-#CORS_ALLOW_ALL_ORIGINS = True 
+CORS_ALLOW_ALL_ORIGINS = True 
 
 
 # Password validation
