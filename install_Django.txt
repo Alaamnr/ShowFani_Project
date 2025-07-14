@@ -1,0 +1,42 @@
+1.
+تثبيت virtualenv (مرة واحدة فقط)
+بال cmd:
+pip install virtualenv
+2.
+انشاء مجلد للمشروع "GRADUATEDPROJECT "اسمو مثلا 
+ وافتح ال CMD بقلب المجلد
+بال CMD منكتب
+python -m venv env
+3.
+بعدها منغعل البيئة 
+بال CMD منكتب
+env\Scripts\activate
+4.
+نقل ملف المشروع showfani لقلب مجلد "GRADUATEDPROJECT ومندخل عليه
+
+بال CMD منكتب
+cd showfani
+5.
+تنزيل المكتبات
+pip install -r requirements.txt
+6.
+python manage.py makemigrations
+وكمان
+python manage.py migrate
+7.
+ تشغيل السيرفر المحلي
+python manage.py runserver
+8.
+بصير السيرفر شغال وفينا نجرب بالمتصفح العنوان
+http://127.0.0.1:8000/swagger/
+وباقي العناوين
+http://127.0.0.1:8000/api/users/register/artist/
+...................
+ملاحظة لنعمل admin منكتب بال cmd
+python manage.py createsuperuser
+ومنضيف المعلومات يلي بيطلبوها وكلمة سر قوية ومنحفظها بعدها
+منشغل السيرفر
+python manage.py runserver
+و منروح عاللينك
+http://127.0.0.1:8000/admin
+

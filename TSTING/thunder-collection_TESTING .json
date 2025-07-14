@@ -1,0 +1,311 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "TESTING ",
+    "collectionId": "ff9aebf9-8305-41eb-aca6-a3fe0fa4b027",
+    "dateExported": "2025-07-13T12:45:20.225Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "c1dd9c97-888f-4ec6-9331-684930255037",
+            "colId": "ff9aebf9-8305-41eb-aca6-a3fe0fa4b027",
+            "containerId": "",
+            "name": "Register INVESTOR",
+            "url": "http://127.0.0.1:8000/api/users/register/investor/",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2025-06-25T11:15:45.762Z",
+            "modified": "2025-07-13T12:39:36.253Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"username\": \"investor_user2\",\n    \"full_name\": \"Ahmad Investments\",\n    \"email\": \"ahmad.invetor2@example.com\",\n    \"phone_number\": \"962790234567\",\n    \"country\": \"Jordan\",\n    \"date_of_birth\": \"1985-05-15\",\n    \"user_type\": \"INVESTOR\",\n    \"password\": \"StrongPassword123!\",\n    \"confirm_password\": \"StrongPassword123!\",\n    \"investor_profile\": {\n        \"support_type\": \"PAYMENT\", \n        \"own_art_company\": true,\n        \"company_name\": \"Art Fund Co.\",\n        \"company_art_field\": \"Performing Arts\",\n        \"art_section\": \"ACTING\", \n        \"what_i_need\": \"Looking for new talents to fund.\",\n        \"bio\": \"Experienced investor in the arts and entertainment industry.\"\n    }\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "9d072a7c-85fb-48d6-8724-c0d29e12d420",
+            "colId": "ff9aebf9-8305-41eb-aca6-a3fe0fa4b027",
+            "containerId": "",
+            "name": "LOGIN",
+            "url": "http://127.0.0.1:8000/api/users/login/",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2025-06-25T11:20:41.086Z",
+            "modified": "2025-07-13T12:40:00.242Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"username_or_email\": \"investor_user2\",\n    \"password\": \"StrongPassword123!\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "7554e8a6-b563-497f-8197-ab256f98476c",
+            "colId": "ff9aebf9-8305-41eb-aca6-a3fe0fa4b027",
+            "containerId": "",
+            "name": "users/profile/",
+            "url": "http://127.0.0.1:8000/api/users/profile/",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2025-06-25T12:14:13.769Z",
+            "modified": "2025-06-25T16:24:07.458Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": " Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODcyMjI3LCJpYXQiOjE3NTA4Njg2MjcsImp0aSI6ImQ1NDA5Yjk3YmY4NjRhMzU4MTNiNDJkOTk2MmZhMjAwIiwidXNlcl9pZCI6NH0.ar2g0OlUyhgdNplZLsvJ0Y3ONPhrpWH5xug2fmoWrso"
+                }
+            ]
+        },
+        {
+            "_id": "e7d7b186-0c6e-4dc4-bdd6-e6cd305921ad",
+            "colId": "ff9aebf9-8305-41eb-aca6-a3fe0fa4b027",
+            "containerId": "",
+            "name": "u[date profile",
+            "url": "http://127.0.0.1:8000/api/users/profile/",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2025-06-25T12:38:25.543Z",
+            "modified": "2025-06-25T12:38:25.543Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU3NTU5LCJpYXQiOjE3NTA4NTM5NTksImp0aSI6IjEzMjc3ZWNlZDBmZjQ1MDY5MTE1ODU0OWRkODE3YjMyIiwidXNlcl9pZCI6NH0.tbB5L6hu6yv0tOvH2lonYkspfCfJJ5iucviixOYQ3ws"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"full_name\": \"Updated Artist Name\",\n    \"country\": \"Syria - New City\",\n    \"artist_profile\": {\n        \"what_i_need\": \"Looking for new opportunities in film.\"\n    }\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "bfaa2215-dc41-4892-a98c-9564555e9783",
+            "colId": "ff9aebf9-8305-41eb-aca6-a3fe0fa4b027",
+            "containerId": "",
+            "name": "serr-other-profile",
+            "url": "http://127.0.0.1:8000/api/users/profile/alaa",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2025-06-25T12:41:28.875Z",
+            "modified": "2025-06-25T12:41:28.875Z",
+            "headers": []
+        },
+        {
+            "_id": "ca016e14-d2f3-4304-b8ab-07683060b552",
+            "colId": "ff9aebf9-8305-41eb-aca6-a3fe0fa4b027",
+            "containerId": "",
+            "name": "Create posts",
+            "url": "http://127.0.0.1:8000/api/posts/",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2025-06-25T12:54:50.766Z",
+            "modified": "2025-06-25T12:54:50.766Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU3NTU5LCJpYXQiOjE3NTA4NTM5NTksImp0aSI6IjEzMjc3ZWNlZDBmZjQ1MDY5MTE1ODU0OWRkODE3YjMyIiwidXNlcl9pZCI6NH0.tbB5L6hu6yv0tOvH2lonYkspfCfJJ5iucviixOYQ3ws"
+                }
+            ],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "description",
+                        "value": "Tgis time next year ..i'ma be the one who do everything and more.."
+                    },
+                    {
+                        "name": "art_section",
+                        "value": "OTHER"
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "a25254e6-926a-4918-af01-7f1becd9d874",
+            "colId": "ff9aebf9-8305-41eb-aca6-a3fe0fa4b027",
+            "containerId": "",
+            "name": "Get Posts by Username",
+            "url": "http://127.0.0.1:8000/api/posts/user/alaa",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2025-06-25T12:56:01.238Z",
+            "modified": "2025-06-25T12:56:01.238Z",
+            "headers": []
+        },
+        {
+            "_id": "5c15056c-bf75-44d3-a05e-6ec12c0b5060",
+            "colId": "ff9aebf9-8305-41eb-aca6-a3fe0fa4b027",
+            "containerId": "",
+            "name": "Filter Post",
+            "url": "http://127.0.0.1:8000/api/filters/posts",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2025-06-25T12:57:30.673Z",
+            "modified": "2025-06-25T12:57:30.673Z",
+            "headers": [],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "user_type:",
+                        "value": "artist"
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "0b0248e9-2fe6-4555-967c-626e010a26c7",
+            "colId": "ff9aebf9-8305-41eb-aca6-a3fe0fa4b027",
+            "containerId": "",
+            "name": "UPDATE POST",
+            "url": "http://127.0.0.1:8000/api/posts/5",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2025-06-25T16:26:26.949Z",
+            "modified": "2025-06-25T16:26:26.949Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODcyMjI3LCJpYXQiOjE3NTA4Njg2MjcsImp0aSI6ImQ1NDA5Yjk3YmY4NjRhMzU4MTNiNDJkOTk2MmZhMjAwIiwidXNlcl9pZCI6NH0.ar2g0OlUyhgdNplZLsvJ0Y3ONPhrpWH5xug2fmoWrso"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"art_section\": \"ACTING\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "c1fd101c-f406-4a0e-87db-3554243ec0dd",
+            "colId": "ff9aebf9-8305-41eb-aca6-a3fe0fa4b027",
+            "containerId": "",
+            "name": "search history",
+            "url": "http://127.0.0.1:8000/api/search/search/history/",
+            "method": "GET",
+            "sortNum": 110000,
+            "created": "2025-06-25T16:28:35.959Z",
+            "modified": "2025-06-25T16:28:35.959Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODcyMjI3LCJpYXQiOjE3NTA4Njg2MjcsImp0aSI6ImQ1NDA5Yjk3YmY4NjRhMzU4MTNiNDJkOTk2MmZhMjAwIiwidXNlcl9pZCI6NH0.ar2g0OlUyhgdNplZLsvJ0Y3ONPhrpWH5xug2fmoWrso"
+                }
+            ]
+        },
+        {
+            "_id": "9e4b4df1-4fdf-4bd5-96ca-e87d066bec75",
+            "colId": "ff9aebf9-8305-41eb-aca6-a3fe0fa4b027",
+            "containerId": "",
+            "name": "WELCOME PAGE",
+            "url": "http://127.0.0.1:8000/api/app/welcome",
+            "method": "GET",
+            "sortNum": 120000,
+            "created": "2025-06-25T16:29:30.201Z",
+            "modified": "2025-06-25T16:29:30.201Z",
+            "headers": []
+        },
+        {
+            "_id": "e9ea0717-bec7-47d1-a459-9fc913154863",
+            "colId": "ff9aebf9-8305-41eb-aca6-a3fe0fa4b027",
+            "containerId": "",
+            "name": "HOME PAGE",
+            "url": "http://127.0.0.1:8000/api/app/home",
+            "method": "GET",
+            "sortNum": 130000,
+            "created": "2025-06-25T16:30:24.464Z",
+            "modified": "2025-06-25T16:30:24.464Z",
+            "headers": []
+        },
+        {
+            "_id": "64dfb127-5a37-41d0-8be8-53dab091cdc8",
+            "colId": "ff9aebf9-8305-41eb-aca6-a3fe0fa4b027",
+            "containerId": "",
+            "name": "CHAT",
+            "url": "http://127.0.0.1:8000/api/chat/",
+            "method": "POST",
+            "sortNum": 140000,
+            "created": "2025-06-25T16:41:17.492Z",
+            "modified": "2025-06-25T16:44:21.581Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODcyMjI3LCJpYXQiOjE3NTA4Njg2MjcsImp0aSI6ImQ1NDA5Yjk3YmY4NjRhMzU4MTNiNDJkOTk2MmZhMjAwIiwidXNlcl9pZCI6NH0.ar2g0OlUyhgdNplZLsvJ0Y3ONPhrpWH5xug2fmoWrso"
+                }
+            ],
+            "body": {
+                "type": "formencoded",
+                "raw": "",
+                "form": [
+                    {
+                        "name": "other_user_id",
+                        "value": "2"
+                    },
+                    {
+                        "name": "text_content",
+                        "value": "\"HI\""
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "8b2a2c9d-fe33-4707-b059-637db1dc5007",
+            "colId": "ff9aebf9-8305-41eb-aca6-a3fe0fa4b027",
+            "containerId": "",
+            "name": "GET ALL CHATS",
+            "url": "http://127.0.0.1:8000/api/chat/",
+            "method": "GET",
+            "sortNum": 150000,
+            "created": "2025-06-25T16:43:53.768Z",
+            "modified": "2025-06-25T16:43:53.768Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODcyMjI3LCJpYXQiOjE3NTA4Njg2MjcsImp0aSI6ImQ1NDA5Yjk3YmY4NjRhMzU4MTNiNDJkOTk2MmZhMjAwIiwidXNlcl9pZCI6NH0.ar2g0OlUyhgdNplZLsvJ0Y3ONPhrpWH5xug2fmoWrso"
+                }
+            ]
+        },
+        {
+            "_id": "27227f68-7b77-49f7-a46e-9947ad699dba",
+            "colId": "ff9aebf9-8305-41eb-aca6-a3fe0fa4b027",
+            "containerId": "",
+            "name": "register/artist/",
+            "url": "http://127.0.0.1:8000/api/users/register/artist/",
+            "method": "POST",
+            "sortNum": 160000,
+            "created": "2025-07-12T20:44:49.663Z",
+            "modified": "2025-07-12T20:44:49.663Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n    \"username\": \"artist_creative_1\",\r\n    \"full_name\": \"Lina Artistry\",\r\n    \"email\": \"lina.artist@example.com\",\r\n    \"phone_number\": \"962779876543\",\r\n    \"country\": \"Jordan\",\r\n    \"date_of_birth\": \"1995-08-20\",\r\n    \"user_type\": \"ARTIST\",\r\n    \"password\": \"ArtisticPass!123\",\r\n    \"confirm_password\": \"ArtisticPass!123\",\r\n    \"artist_profile\": {\r\n        \"art_section\": \"WRITING\",\r\n        \"what_i_need\": \"Looking for funding for my new script.\"\r\n        // \"art_cv\": \"لا يمكن رفع الملفات بهذه الطريقة لـ JSON Body\" \r\n    }\r\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "wMule681g-buhasPO8iaNDNT0L6nAPr6h-1W6sddHUBrmuDzO3zou-ZDT13OJ_48SIH2rINMsT20PFcDQJxIhA"
+}

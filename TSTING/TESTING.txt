@@ -1,0 +1,1394 @@
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/register/artist
+Method: POST
+Request Headers:
+{
+  "user-agent": "got (https://github.com/sindresorhus/got)",
+  "content-length": "424",
+  "accept-encoding": "gzip, deflate, br",
+  "Content-Type": "application/json"
+}
+Request Body:
+{
+    "username": "newartistuser",
+    "full_name": "Artist Name",
+    "email": "artist@example.com",
+    "phone_number": "00963987654321",
+    "country": "Syria",
+    "date_of_birth": "1990-01-15",
+    "password": "StrongPassword123",
+    "confirm_password": "StrongPassword123",
+    "artist_profile": {
+        "art_section": "ACTING",
+        "what_i_need": "I need funding for my next play."
+      
+    }
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/register/artist/
+Method: POST
+Request Headers:
+{
+  "user-agent": "got (https://github.com/sindresorhus/got)",
+  "content-length": "424",
+  "accept-encoding": "gzip, deflate, br",
+  "Content-Type": "application/json"
+}
+Request Body:
+{
+    "username": "newartistuser",
+    "full_name": "Artist Name",
+    "email": "artist@example.com",
+    "phone_number": "00963987654321",
+    "country": "Syria",
+    "date_of_birth": "1990-01-15",
+    "password": "StrongPassword123",
+    "confirm_password": "StrongPassword123",
+    "artist_profile": {
+        "art_section": "ACTING",
+        "what_i_need": "I need funding for my next play."
+      
+    }
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/register/artist/
+Method: POST
+Request Headers:
+{
+  "user-agent": "got (https://github.com/sindresorhus/got)",
+  "content-length": "450",
+  "accept-encoding": "gzip, deflate, br",
+  "Content-Type": "application/json"
+}
+Request Body:
+{
+    "username": "newartistuser",
+    "full_name": "Artist Name",
+    "email": "artist@example.com",
+    "phone_number": "00963987654321",
+    "country": "Syria",
+    "date_of_birth": "1990-01-15",
+    "password": "StrongPassword123",
+    "confirm_password": "StrongPassword123",
+    "user_type":"artist"
+    "artist_profile": {
+        "art_section": "ACTING",
+        "what_i_need": "I need funding for my next play."
+      
+    }
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/register/artist/
+Method: POST
+Request Headers:
+{
+  "user-agent": "got (https://github.com/sindresorhus/got)",
+  "content-length": "451",
+  "accept-encoding": "gzip, deflate, br",
+  "Content-Type": "application/json"
+}
+Request Body:
+{
+    "username": "newartistuser",
+    "full_name": "Artist Name",
+    "email": "artist@example.com",
+    "phone_number": "00963987654321",
+    "country": "Syria",
+    "date_of_birth": "1990-01-15",
+    "password": "StrongPassword123",
+    "confirm_password": "StrongPassword123",
+    "user_type":"artist",
+    "artist_profile": {
+        "art_section": "ACTING",
+        "what_i_need": "I need funding for my next play."
+      
+    }
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/register/artist/
+Method: POST
+Request Headers:
+{
+  "user-agent": "got (https://github.com/sindresorhus/got)",
+  "content-length": "451",
+  "accept-encoding": "gzip, deflate, br",
+  "Content-Type": "application/json"
+}
+Request Body:
+{
+    "username": "newartistuser",
+    "full_name": "Artist Name",
+    "email": "artist@example.com",
+    "phone_number": "00963987654321",
+    "country": "Syria",
+    "date_of_birth": "1990-01-15",
+    "password": "StrongPassword123",
+    "confirm_password": "StrongPassword123",
+    "user_type":"Artist",
+    "artist_profile": {
+        "art_section": "ACTING",
+        "what_i_need": "I need funding for my next play."
+      
+    }
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/register/artist/
+Method: POST
+Request Headers:
+{
+  "user-agent": "got (https://github.com/sindresorhus/got)",
+  "content-length": "451",
+  "accept-encoding": "gzip, deflate, br",
+  "Content-Type": "application/json"
+}
+Request Body:
+{
+    "username": "newartistuser",
+    "full_name": "Artist Name",
+    "email": "artist@example.com",
+    "phone_number": "00963987654321",
+    "country": "Syria",
+    "date_of_birth": "1990-01-15",
+    "password": "StrongPassword123",
+    "confirm_password": "StrongPassword123",
+    "user_type":"ARTIST",
+    "artist_profile": {
+        "art_section": "ACTING",
+        "what_i_need": "I need funding for my next play."
+      
+    }
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/login/
+Method: POST
+Request Headers:
+{
+  "user-agent": "got (https://github.com/sindresorhus/got)",
+  "content-length": "75",
+  "accept-encoding": "gzip, deflate, br",
+  "Content-Type": "application/json"
+}
+Request Body:
+{
+    "username": "newartistuser",
+    "password": "StrongPassword123"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/profile/
+Method: GET
+Request Headers:
+{
+  "user-agent": "got (https://github.com/sindresorhus/got)",
+  "content-length": "72",
+  "accept-encoding": "gzip, deflate, br",
+  "Authorization": "\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODUzODc0LCJpYXQiOjE3NTA4NTAyNzQsImp0aSI6IjJhZmMxOTBiOWM0YzQyNTI4MWY1Mjc4YzE2ZWQwODEwIiwidXNlcl9pZCI6NH0.Jc-QnIvGAfhe_RK4M7_1H2dmKNsXpbzqmGqoatboV70\"",
+  "Content-Type": "application/json"
+}
+Request Body:
+{
+    "username": "newartistuser",
+    "password": "StrongPassword123"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/profile/
+Method: GET
+Request Headers:
+{
+  "user-agent": "got (https://github.com/sindresorhus/got)",
+  "content-length": "72",
+  "accept-encoding": "gzip, deflate, br",
+  "Authorization": "\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc1MTQ1NTA3NCwiaWF0IjoxNzUwODUwMjc0LCJqdGkiOiJlM2Y0ZjgxOTg2NjI0NGVhYTBkZmUzOWVhOTNlYTkwYyIsInVzZXJfaWQiOjR9.EGVmNGIixH4U9Aue9Ybl_WD9UpHpKIDTbmXAKTpCkZE\"",
+  "Content-Type": "application/json"
+}
+Request Body:
+{
+    "username": "newartistuser",
+    "password": "StrongPassword123"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/profile/
+Method: GET
+Request Headers:
+{
+  "user-agent": "got (https://github.com/sindresorhus/got)",
+  "content-length": "72",
+  "accept-encoding": "gzip, deflate, br",
+  "Authorization": "\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc1MTQ1NTA3NCwiaWF0IjoxNzUwODUwMjc0LCJqdGkiOiJlM2Y0ZjgxOTg2NjI0NGVhYTBkZmUzOWVhOTNlYTkwYyIsInVzZXJfaWQiOjR9.EGVmNGIixH4U9Aue9Ybl_WD9UpHpKIDTbmXAKTpCkZE\"",
+  "Content-Type": "application/json"
+}
+Request Body:
+{
+    "username": "newartistuser",
+    "password": "StrongPassword123"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/profile/
+Method: GET
+Request Headers:
+{
+  "user-agent": "got (https://github.com/sindresorhus/got)",
+  "content-length": "72",
+  "accept-encoding": "gzip, deflate, br",
+  "Authorization": "\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODUzODc0LCJpYXQiOjE3NTA4NTAyNzQsImp0aSI6IjJhZmMxOTBiOWM0YzQyNTI4MWY1Mjc4YzE2ZWQwODEwIiwidXNlcl9pZCI6NH0.Jc-QnIvGAfhe_RK4M7_1H2dmKNsXpbzqmGqoatboV70\"",
+  "Content-Type": "application/json"
+}
+Request Body:
+{
+    "username": "newartistuser",
+    "password": "StrongPassword123"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/profile/
+Method: GET
+Request Headers:
+{
+  "user-agent": "got (https://github.com/sindresorhus/got)",
+  "content-length": "72",
+  "accept-encoding": "gzip, deflate, br",
+  "Authorization": "\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODUzODc0LCJpYXQiOjE3NTA4NTAyNzQsImp0aSI6IjJhZmMxOTBiOWM0YzQyNTI4MWY1Mjc4YzE2ZWQwODEwIiwidXNlcl9pZCI6NH0.Jc-QnIvGAfhe_RK4M7_1H2dmKNsXpbzqmGqoatboV70\"",
+  "Content-Type": "application/json"
+}
+Request Body:
+{
+    "username": "newartistuser",
+    "password": "StrongPassword123"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/profile/
+Method: GET
+Request Headers:
+{
+  "user-agent": "got (https://github.com/sindresorhus/got)",
+  "content-length": "72",
+  "accept-encoding": "gzip, deflate, br",
+  "Authorization": "Bearer \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODUzODc0LCJpYXQiOjE3NTA4NTAyNzQsImp0aSI6IjJhZmMxOTBiOWM0YzQyNTI4MWY1Mjc4YzE2ZWQwODEwIiwidXNlcl9pZCI6NH0.Jc-QnIvGAfhe_RK4M7_1H2dmKNsXpbzqmGqoatboV70\"",
+  "Content-Type": "application/json"
+}
+Request Body:
+{
+    "username": "newartistuser",
+    "password": "StrongPassword123"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/profile/
+Method: GET
+Request Headers:
+{
+  "user-agent": "got (https://github.com/sindresorhus/got)",
+  "content-length": "72",
+  "accept-encoding": "gzip, deflate, br",
+  "Authorization": "Bearer : \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODUzODc0LCJpYXQiOjE3NTA4NTAyNzQsImp0aSI6IjJhZmMxOTBiOWM0YzQyNTI4MWY1Mjc4YzE2ZWQwODEwIiwidXNlcl9pZCI6NH0.Jc-QnIvGAfhe_RK4M7_1H2dmKNsXpbzqmGqoatboV70\"",
+  "Content-Type": "application/json"
+}
+Request Body:
+{
+    "username": "newartistuser",
+    "password": "StrongPassword123"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/profile/
+Method: GET
+Request Headers:
+{
+  "user-agent": "got (https://github.com/sindresorhus/got)",
+  "content-length": "72",
+  "accept-encoding": "gzip, deflate, br",
+  "Authorization": "Bearer: \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODUzODc0LCJpYXQiOjE3NTA4NTAyNzQsImp0aSI6IjJhZmMxOTBiOWM0YzQyNTI4MWY1Mjc4YzE2ZWQwODEwIiwidXNlcl9pZCI6NH0.Jc-QnIvGAfhe_RK4M7_1H2dmKNsXpbzqmGqoatboV70\"",
+  "Content-Type": "application/json"
+}
+Request Body:
+{
+    "username": "newartistuser",
+    "password": "StrongPassword123"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/profile/
+Method: GET
+Request Headers:
+{
+  "accept-encoding": "gzip, deflate, br",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer: \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODUzODc0LCJpYXQiOjE3NTA4NTAyNzQsImp0aSI6IjJhZmMxOTBiOWM0YzQyNTI4MWY1Mjc4YzE2ZWQwODEwIiwidXNlcl9pZCI6NH0.Jc-QnIvGAfhe_RK4M7_1H2dmKNsXpbzqmGqoatboV70\""
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/login/
+Method: POST
+Request Headers:
+{
+  "user-agent": "got (https://github.com/sindresorhus/got)",
+  "content-length": "72",
+  "accept-encoding": "gzip, deflate, br",
+  "Content-Type": "application/json"
+}
+Request Body:
+{
+    "username": "newartistuser",
+    "password": "StrongPassword123"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/login/
+Method: POST
+Request Headers:
+{
+  "user-agent": "got (https://github.com/sindresorhus/got)",
+  "content-length": "72",
+  "accept-encoding": "gzip, deflate, br",
+  "Content-Type": "application/json"
+}
+Request Body:
+{
+    "username": "newartistuser",
+    "password": "StrongPassword123"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/profile/
+Method: GET
+Request Headers:
+{
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU0ODM1LCJpYXQiOjE3NTA4NTEyMzUsImp0aSI6IjYwNmY4NzBmMjNlMDRjOGU5NzY4MDZkMDIwMjM3NDc3IiwidXNlcl9pZCI6NH0.AJJp30CPwYJVO2ppgbcRz6EU1NQ-_YZXWfMWFdgqUg8\""
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/profile/
+Method: GET
+Request Headers:
+{
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": " Bearer \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU0ODM1LCJpYXQiOjE3NTA4NTEyMzUsImp0aSI6IjYwNmY4NzBmMjNlMDRjOGU5NzY4MDZkMDIwMjM3NDc3IiwidXNlcl9pZCI6NH0.AJJp30CPwYJVO2ppgbcRz6EU1NQ-_YZXWfMWFdgqUg8\""
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/profile/
+Method: GET
+Request Headers:
+{
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": " Bearer \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU0ODM1LCJpYXQiOjE3NTA4NTEyMzUsImp0aSI6IjYwNmY4NzBmMjNlMDRjOGU5NzY4MDZkMDIwMjM3NDc3IiwidXNlcl9pZCI6NH0.AJJp30CPwYJVO2ppgbcRz6EU1NQ-_YZXWfMWFdgqUg8\""
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/login/
+Method: POST
+Request Headers:
+{
+  "user-agent": "got (https://github.com/sindresorhus/got)",
+  "content-length": "72",
+  "accept-encoding": "gzip, deflate, br",
+  "Content-Type": "application/json"
+}
+Request Body:
+{
+    "username": "newartistuser",
+    "password": "StrongPassword123"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/profile/
+Method: GET
+Request Headers:
+{
+  "user-agent": "got (https://github.com/sindresorhus/got)",
+  "accept-encoding": "gzip, deflate, br",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU1NDE0LCJpYXQiOjE3NTA4NTE4MTQsImp0aSI6IjI4NWE2NzMxN2MyMjQwMTBiNDlhN2UxOTIwOWU2ZDBjIiwidXNlcl9pZCI6NH0.OsEAzGAfLMLShSZUYxsaBztVfRe6eQhxyzoLLYBAk_4"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/profile/
+Method: GET
+Request Headers:
+{
+  "user-agent": "got (https://github.com/sindresorhus/got)",
+  "accept-encoding": "gzip, deflate, br",
+  "Authorization": "Bearer \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU1NDE0LCJpYXQiOjE3NTA4NTE4MTQsImp0aSI6IjI4NWE2NzMxN2MyMjQwMTBiNDlhN2UxOTIwOWU2ZDBjIiwidXNlcl9pZCI6NH0.OsEAzGAfLMLShSZUYxsaBztVfRe6eQhxyzoLLYBAk_4\""
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/profile/
+Method: GET
+Request Headers:
+{
+  "user-agent": "got (https://github.com/sindresorhus/got)",
+  "accept-encoding": "gzip, deflate, br",
+  "Authorization": " Bearer \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU1NDE0LCJpYXQiOjE3NTA4NTE4MTQsImp0aSI6IjI4NWE2NzMxN2MyMjQwMTBiNDlhN2UxOTIwOWU2ZDBjIiwidXNlcl9pZCI6NH0.OsEAzGAfLMLShSZUYxsaBztVfRe6eQhxyzoLLYBAk_4\""
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/profile/
+Method: GET
+Request Headers:
+{
+  "user-agent": "got (https://github.com/sindresorhus/got)",
+  "accept-encoding": "gzip, deflate, br",
+  "Authorization": " Bearer \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU1NDE0LCJpYXQiOjE3NTA4NTE4MTQsImp0aSI6IjI4NWE2NzMxN2MyMjQwMTBiNDlhN2UxOTIwOWU2ZDBjIiwidXNlcl9pZCI6NH0.OsEAzGAfLMLShSZUYxsaBztVfRe6eQhxyzoLLYBAk_4\""
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/profile/
+Method: GET
+Request Headers:
+{
+  "user-agent": "got (https://github.com/sindresorhus/got)",
+  "accept-encoding": "gzip, deflate, br",
+  "Authorization": " Bearer \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU1NDE0LCJpYXQiOjE3NTA4NTE4MTQsImp0aSI6IjI4NWE2NzMxN2MyMjQwMTBiNDlhN2UxOTIwOWU2ZDBjIiwidXNlcl9pZCI6NH0.OsEAzGAfLMLShSZUYxsaBztVfRe6eQhxyzoLLYBAk_4\""
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/profile/
+Method: GET
+Request Headers:
+{
+  "user-agent": "got (https://github.com/sindresorhus/got)",
+  "accept-encoding": "gzip, deflate, br",
+  "Authorization": " Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU1NDE0LCJpYXQiOjE3NTA4NTE4MTQsImp0aSI6IjI4NWE2NzMxN2MyMjQwMTBiNDlhN2UxOTIwOWU2ZDBjIiwidXNlcl9pZCI6NH0.OsEAzGAfLMLShSZUYxsaBztVfRe6eQhxyzoLLYBAk_4"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/profile/
+Method: GET
+Request Headers:
+{
+  "user-agent": "got (https://github.com/sindresorhus/got)",
+  "accept-encoding": "gzip, deflate, br",
+  "Authorization": " Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU1NDE0LCJpYXQiOjE3NTA4NTE4MTQsImp0aSI6IjI4NWE2NzMxN2MyMjQwMTBiNDlhN2UxOTIwOWU2ZDBjIiwidXNlcl9pZCI6NH0.OsEAzGAfLMLShSZUYxsaBztVfRe6eQhxyzoLLYBAk_4"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/profile/
+Method: GET
+Request Headers:
+{
+  "user-agent": "got (https://github.com/sindresorhus/got)",
+  "accept-encoding": "gzip, deflate, br",
+  "X-Authorization": " Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU1NDE0LCJpYXQiOjE3NTA4NTE4MTQsImp0aSI6IjI4NWE2NzMxN2MyMjQwMTBiNDlhN2UxOTIwOWU2ZDBjIiwidXNlcl9pZCI6NH0.OsEAzGAfLMLShSZUYxsaBztVfRe6eQhxyzoLLYBAk_4"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/profile/
+Method: GET
+Request Headers:
+{
+  "user-agent": "got (https://github.com/sindresorhus/got)",
+  "accept-encoding": "gzip, deflate, br",
+  "Proxy-Authorization": " Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU1NDE0LCJpYXQiOjE3NTA4NTE4MTQsImp0aSI6IjI4NWE2NzMxN2MyMjQwMTBiNDlhN2UxOTIwOWU2ZDBjIiwidXNlcl9pZCI6NH0.OsEAzGAfLMLShSZUYxsaBztVfRe6eQhxyzoLLYBAk_4"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/profile/
+Method: GET
+Request Headers:
+{
+  "accept-encoding": "gzip, deflate, br",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": " Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU1NDE0LCJpYXQiOjE3NTA4NTE4MTQsImp0aSI6IjI4NWE2NzMxN2MyMjQwMTBiNDlhN2UxOTIwOWU2ZDBjIiwidXNlcl9pZCI6NH0.OsEAzGAfLMLShSZUYxsaBztVfRe6eQhxyzoLLYBAk_4"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/profile/
+Method: GET
+Request Headers:
+{
+  "accept-encoding": "gzip, deflate, br",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": " Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU1NDE0LCJpYXQiOjE3NTA4NTE4MTQsImp0aSI6IjI4NWE2NzMxN2MyMjQwMTBiNDlhN2UxOTIwOWU2ZDBjIiwidXNlcl9pZCI6NH0.OsEAzGAfLMLShSZUYxsaBztVfRe6eQhxyzoLLYBAk_4"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/profile/
+Method: GET
+Request Headers:
+{
+  "accept-encoding": "gzip, deflate, br",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU1NDE0LCJpYXQiOjE3NTA4NTE4MTQsImp0aSI6IjI4NWE2NzMxN2MyMjQwMTBiNDlhN2UxOTIwOWU2ZDBjIiwidXNlcl9pZCI6NH0.OsEAzGAfLMLShSZUYxsaBztVfRe6eQhxyzoLLYBAk_4"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/login/
+Method: POST
+Request Headers:
+{
+  "user-agent": "got (https://github.com/sindresorhus/got)",
+  "content-length": "72",
+  "accept-encoding": "gzip, deflate, br",
+  "Content-Type": "application/json"
+}
+Request Body:
+{
+    "username": "newartistuser",
+    "password": "StrongPassword123"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/profile/
+Method: GET
+Request Headers:
+{
+  "accept-encoding": "gzip, deflate, br",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU2MDI4LCJpYXQiOjE3NTA4NTI0MjgsImp0aSI6IjUwZDFkODk4ZTJjYzRhYjJiN2I0MWU4YzdkMDk4OWM0IiwidXNlcl9pZCI6NH0.Curh6-BcXK2jwBN_UV-hGXgrhdqmthNon8yF37huxOM"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/profile/
+Method: GET
+Request Headers:
+{
+  "accept-encoding": "gzip, deflate, br",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU2MDI4LCJpYXQiOjE3NTA4NTI0MjgsImp0aSI6IjUwZDFkODk4ZTJjYzRhYjJiN2I0MWU4YzdkMDk4OWM0IiwidXNlcl9pZCI6NH0.Curh6-BcXK2jwBN_UV-hGXgrhdqmthNon8yF37huxOM"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/profile/
+Method: GET
+Request Headers:
+{
+  "accept-encoding": "gzip, deflate, br",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU2MDI4LCJpYXQiOjE3NTA4NTI0MjgsImp0aSI6IjUwZDFkODk4ZTJjYzRhYjJiN2I0MWU4YzdkMDk4OWM0IiwidXNlcl9pZCI6NH0.Curh6-BcXK2jwBN_UV-hGXgrhdqmthNon8yF37huxOM"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/profile/
+Method: GET
+Request Headers:
+{
+  "accept-encoding": "gzip, deflate, br",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU2MDI4LCJpYXQiOjE3NTA4NTI0MjgsImp0aSI6IjUwZDFkODk4ZTJjYzRhYjJiN2I0MWU4YzdkMDk4OWM0IiwidXNlcl9pZCI6NH0.Curh6-BcXK2jwBN_UV-hGXgrhdqmthNon8yF37huxOM"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/profile/
+Method: GET
+Request Headers:
+{
+  "accept-encoding": "gzip, deflate, br",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU2MDI4LCJpYXQiOjE3NTA4NTI0MjgsImp0aSI6IjUwZDFkODk4ZTJjYzRhYjJiN2I0MWU4YzdkMDk4OWM0IiwidXNlcl9pZCI6NH0.Curh6-BcXK2jwBN_UV-hGXgrhdqmthNon8yF37huxOM"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/profile/
+Method: GET
+Request Headers:
+{
+  "accept-encoding": "gzip, deflate, br",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU2MDI4LCJpYXQiOjE3NTA4NTI0MjgsImp0aSI6IjUwZDFkODk4ZTJjYzRhYjJiN2I0MWU4YzdkMDk4OWM0IiwidXNlcl9pZCI6NH0.Curh6-BcXK2jwBN_UV-hGXgrhdqmthNon8yF37huxOM"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/profile/
+Method: GET
+Request Headers:
+{
+  "accept-encoding": "gzip, deflate, br",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU2MDI4LCJpYXQiOjE3NTA4NTI0MjgsImp0aSI6IjUwZDFkODk4ZTJjYzRhYjJiN2I0MWU4YzdkMDk4OWM0IiwidXNlcl9pZCI6NH0.Curh6-BcXK2jwBN_UV-hGXgrhdqmthNon8yF37huxOM"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/login/
+Method: POST
+Request Headers:
+{
+  "user-agent": "got (https://github.com/sindresorhus/got)",
+  "content-length": "72",
+  "accept-encoding": "gzip, deflate, br",
+  "Content-Type": "application/json"
+}
+Request Body:
+{
+    "username": "newartistuser",
+    "password": "StrongPassword123"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/profile/
+Method: GET
+Request Headers:
+{
+  "accept-encoding": "gzip, deflate, br",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU2NzM0LCJpYXQiOjE3NTA4NTMxMzQsImp0aSI6IjgzNTc0NjU3YjIyMDRkNjBhMTgzZTE5ZTE1ZGRhZjU1IiwidXNlcl9pZCI6NH0.CZ_DhQzfHFJRxwHKljNhTr__y_3BzIS_Q49euFqPYM0"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/profile/
+Method: GET
+Request Headers:
+{
+  "accept-encoding": "gzip, deflate, br",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU2NzM0LCJpYXQiOjE3NTA4NTMxMzQsImp0aSI6IjgzNTc0NjU3YjIyMDRkNjBhMTgzZTE5ZTE1ZGRhZjU1IiwidXNlcl9pZCI6NH0.CZ_DhQzfHFJRxwHKljNhTr__y_3BzIS_Q49euFqPYM0"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/login/
+Method: POST
+Request Headers:
+{
+  "user-agent": "got (https://github.com/sindresorhus/got)",
+  "content-length": "72",
+  "accept-encoding": "gzip, deflate, br",
+  "Content-Type": "application/json"
+}
+Request Body:
+{
+    "username": "newartistuser",
+    "password": "StrongPassword123"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/profile/
+Method: GET
+Request Headers:
+{
+  "accept-encoding": "gzip, deflate, br",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU3MTE1LCJpYXQiOjE3NTA4NTM1MTUsImp0aSI6IjJmZTc2MTM4NmMzMzRiMmJhMGU0Njc3OWQ5MzA0MzU0IiwidXNlcl9pZCI6NH0.5XP4sGBw6y-YK_nJeA49vH5xNB4K6jAmI2dm53VmPGY"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/profile/
+Method: GET
+Request Headers:
+{
+  "accept-encoding": "gzip, deflate, br",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU3MTE1LCJpYXQiOjE3NTA4NTM1MTUsImp0aSI6IjJmZTc2MTM4NmMzMzRiMmJhMGU0Njc3OWQ5MzA0MzU0IiwidXNlcl9pZCI6NH0.5XP4sGBw6y-YK_nJeA49vH5xNB4K6jAmI2dm53VmPGY"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/login/
+Method: POST
+Request Headers:
+{
+  "user-agent": "got (https://github.com/sindresorhus/got)",
+  "content-length": "72",
+  "accept-encoding": "gzip, deflate, br",
+  "Content-Type": "application/json"
+}
+Request Body:
+{
+    "username": "newartistuser",
+    "password": "StrongPassword123"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/profile/
+Method: GET
+Request Headers:
+{
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": " Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU3NTEyLCJpYXQiOjE3NTA4NTM5MTIsImp0aSI6IjFlZTU0MGZjYzFlYjQzN2Y5YmRlZTY3NGM3ZWJhMWY2IiwidXNlcl9pZCI6NH0.Jgqoko4NSFEzpiSSow-RC_lVWaCQmYibFHl3KAW8DIQ"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/login/
+Method: POST
+Request Headers:
+{
+  "user-agent": "got (https://github.com/sindresorhus/got)",
+  "content-length": "72",
+  "accept-encoding": "gzip, deflate, br",
+  "Content-Type": "application/json"
+}
+Request Body:
+{
+    "username": "newartistuser",
+    "password": "StrongPassword123"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/profile/
+Method: GET
+Request Headers:
+{
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": " Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU3NTU5LCJpYXQiOjE3NTA4NTM5NTksImp0aSI6IjEzMjc3ZWNlZDBmZjQ1MDY5MTE1ODU0OWRkODE3YjMyIiwidXNlcl9pZCI6NH0.tbB5L6hu6yv0tOvH2lonYkspfCfJJ5iucviixOYQ3ws"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/profile/
+Method: GET
+Request Headers:
+{
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": " Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU3NTU5LCJpYXQiOjE3NTA4NTM5NTksImp0aSI6IjEzMjc3ZWNlZDBmZjQ1MDY5MTE1ODU0OWRkODE3YjMyIiwidXNlcl9pZCI6NH0.tbB5L6hu6yv0tOvH2lonYkspfCfJJ5iucviixOYQ3ws"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/profile/
+Method: GET
+Request Headers:
+{
+  "content-length": "172",
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU3NTU5LCJpYXQiOjE3NTA4NTM5NTksImp0aSI6IjEzMjc3ZWNlZDBmZjQ1MDY5MTE1ODU0OWRkODE3YjMyIiwidXNlcl9pZCI6NH0.tbB5L6hu6yv0tOvH2lonYkspfCfJJ5iucviixOYQ3ws",
+  "Content-Type": "application/json"
+}
+Request Body:
+{
+    "full_name": "Updated Artist Name",
+    "country": "Syria - New City",
+    "artist_profile": {
+        "what_i_need": "Looking for new opportunities in film."
+    }
+}
+
+---------------- Running Request: ----------------
+Request Url: https://www.thunderclient.com/welcome
+Method: GET
+Request Headers:
+{
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/profile/alaa
+Method: GET
+Request Headers:
+{
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)"
+}
+
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/posts/
+Method: GET
+Request Headers:
+{
+  "content-length": "92",
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU3NTU5LCJpYXQiOjE3NTA4NTM5NTksImp0aSI6IjEzMjc3ZWNlZDBmZjQ1MDY5MTE1ODU0OWRkODE3YjMyIiwidXNlcl9pZCI6NH0.tbB5L6hu6yv0tOvH2lonYkspfCfJJ5iucviixOYQ3ws",
+  "Content-Type": "application/x-www-form-urlencoded"
+}
+Request Body:
+{
+  "description": "Tgis time next year ..i'ma be the one who do everything and more..",
+  "Type": "Writting"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/posts/
+Method: POST
+Request Headers:
+{
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU3NTU5LCJpYXQiOjE3NTA4NTM5NTksImp0aSI6IjEzMjc3ZWNlZDBmZjQ1MDY5MTE1ODU0OWRkODE3YjMyIiwidXNlcl9pZCI6NH0.tbB5L6hu6yv0tOvH2lonYkspfCfJJ5iucviixOYQ3ws"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/posts/
+Method: POST
+Request Headers:
+{
+  "content-length": "99",
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU3NTU5LCJpYXQiOjE3NTA4NTM5NTksImp0aSI6IjEzMjc3ZWNlZDBmZjQ1MDY5MTE1ODU0OWRkODE3YjMyIiwidXNlcl9pZCI6NH0.tbB5L6hu6yv0tOvH2lonYkspfCfJJ5iucviixOYQ3ws",
+  "Content-Type": "application/x-www-form-urlencoded"
+}
+Request Body:
+{
+  "description": "Tgis time next year ..i'ma be the one who do everything and more..",
+  "art_section": "Writting"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/posts/
+Method: POST
+Request Headers:
+{
+  "content-length": "96",
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU3NTU5LCJpYXQiOjE3NTA4NTM5NTksImp0aSI6IjEzMjc3ZWNlZDBmZjQ1MDY5MTE1ODU0OWRkODE3YjMyIiwidXNlcl9pZCI6NH0.tbB5L6hu6yv0tOvH2lonYkspfCfJJ5iucviixOYQ3ws",
+  "Content-Type": "application/x-www-form-urlencoded"
+}
+Request Body:
+{
+  "description": "Tgis time next year ..i'ma be the one who do everything and more..",
+  "art_section": "other"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/posts/
+Method: POST
+Request Headers:
+{
+  "content-length": "96",
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU3NTU5LCJpYXQiOjE3NTA4NTM5NTksImp0aSI6IjEzMjc3ZWNlZDBmZjQ1MDY5MTE1ODU0OWRkODE3YjMyIiwidXNlcl9pZCI6NH0.tbB5L6hu6yv0tOvH2lonYkspfCfJJ5iucviixOYQ3ws",
+  "Content-Type": "application/x-www-form-urlencoded"
+}
+Request Body:
+{
+  "description": "Tgis time next year ..i'ma be the one who do everything and more..",
+  "art_section": "Other"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/posts/
+Method: POST
+Request Headers:
+{
+  "content-length": "96",
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU3NTU5LCJpYXQiOjE3NTA4NTM5NTksImp0aSI6IjEzMjc3ZWNlZDBmZjQ1MDY5MTE1ODU0OWRkODE3YjMyIiwidXNlcl9pZCI6NH0.tbB5L6hu6yv0tOvH2lonYkspfCfJJ5iucviixOYQ3ws",
+  "Content-Type": "application/x-www-form-urlencoded"
+}
+Request Body:
+{
+  "description": "Tgis time next year ..i'ma be the one who do everything and more..",
+  "art_section": "OTHER"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/posts/user/alaa
+Method: GET
+Request Headers:
+{
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)"
+}
+
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/filters/posts
+Method: GET
+Request Headers:
+{
+  "content-length": "17",
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Content-Type": "application/x-www-form-urlencoded"
+}
+Request Body:
+{
+  "user_type:": "artist"
+}
+
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/search/search/
+Method: POST
+Request Headers:
+{
+  "content-length": "19",
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU3NTU5LCJpYXQiOjE3NTA4NTM5NTksImp0aSI6IjEzMjc3ZWNlZDBmZjQ1MDY5MTE1ODU0OWRkODE3YjMyIiwidXNlcl9pZCI6NH0.tbB5L6hu6yv0tOvH2lonYkspfCfJJ5iucviixOYQ3ws",
+  "Content-Type": "application/json"
+}
+Request Body:
+{
+  "query": "hi"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/search/search/
+Method: POST
+Request Headers:
+{
+  "content-length": "21",
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU3NTU5LCJpYXQiOjE3NTA4NTM5NTksImp0aSI6IjEzMjc3ZWNlZDBmZjQ1MDY5MTE1ODU0OWRkODE3YjMyIiwidXNlcl9pZCI6NH0.tbB5L6hu6yv0tOvH2lonYkspfCfJJ5iucviixOYQ3ws",
+  "Content-Type": "application/json"
+}
+Request Body:
+{
+  "query": "time"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/search/search/
+Method: POST
+Request Headers:
+{
+  "content-length": "36",
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU3NTU5LCJpYXQiOjE3NTA4NTM5NTksImp0aSI6IjEzMjc3ZWNlZDBmZjQ1MDY5MTE1ODU0OWRkODE3YjMyIiwidXNlcl9pZCI6NH0.tbB5L6hu6yv0tOvH2lonYkspfCfJJ5iucviixOYQ3ws",
+  "Content-Type": "application/json"
+}
+Request Body:
+{
+  "query": "ىخخخخخخخخe"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/search/search/
+Method: POST
+Request Headers:
+{
+  "content-length": "20",
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU3NTU5LCJpYXQiOjE3NTA4NTM5NTksImp0aSI6IjEzMjc3ZWNlZDBmZjQ1MDY5MTE1ODU0OWRkODE3YjMyIiwidXNlcl9pZCI6NH0.tbB5L6hu6yv0tOvH2lonYkspfCfJJ5iucviixOYQ3ws",
+  "Content-Type": "application/json"
+}
+Request Body:
+{
+  "query": "you"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/search/search/
+Method: POST
+Request Headers:
+{
+  "content-length": "21",
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU3NTU5LCJpYXQiOjE3NTA4NTM5NTksImp0aSI6IjEzMjc3ZWNlZDBmZjQ1MDY5MTE1ODU0OWRkODE3YjMyIiwidXNlcl9pZCI6NH0.tbB5L6hu6yv0tOvH2lonYkspfCfJJ5iucviixOYQ3ws",
+  "Content-Type": "application/json"
+}
+Request Body:
+{
+  "query": "time"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/search/search/
+Method: POST
+Request Headers:
+{
+  "content-length": "19",
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU3NTU5LCJpYXQiOjE3NTA4NTM5NTksImp0aSI6IjEzMjc3ZWNlZDBmZjQ1MDY5MTE1ODU0OWRkODE3YjMyIiwidXNlcl9pZCI6NH0.tbB5L6hu6yv0tOvH2lonYkspfCfJJ5iucviixOYQ3ws",
+  "Content-Type": "application/json"
+}
+Request Body:
+{
+  "query": "mn"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/search/search/
+Method: POST
+Request Headers:
+{
+  "content-length": "21",
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODU3NTU5LCJpYXQiOjE3NTA4NTM5NTksImp0aSI6IjEzMjc3ZWNlZDBmZjQ1MDY5MTE1ODU0OWRkODE3YjMyIiwidXNlcl9pZCI6NH0.tbB5L6hu6yv0tOvH2lonYkspfCfJJ5iucviixOYQ3ws",
+  "Content-Type": "application/json"
+}
+Request Body:
+{
+  "query": "time"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/login/
+Method: POST
+Request Headers:
+{
+  "user-agent": "got (https://github.com/sindresorhus/got)",
+  "content-length": "72",
+  "accept-encoding": "gzip, deflate, br",
+  "Content-Type": "application/json"
+}
+Request Body:
+{
+    "username": "newartistuser",
+    "password": "StrongPassword123"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/users/profile/
+Method: GET
+Request Headers:
+{
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": " Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODcyMjI3LCJpYXQiOjE3NTA4Njg2MjcsImp0aSI6ImQ1NDA5Yjk3YmY4NjRhMzU4MTNiNDJkOTk2MmZhMjAwIiwidXNlcl9pZCI6NH0.ar2g0OlUyhgdNplZLsvJ0Y3ONPhrpWH5xug2fmoWrso"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/posts/
+Method: GET
+Request Headers:
+{
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODcyMjI3LCJpYXQiOjE3NTA4Njg2MjcsImp0aSI6ImQ1NDA5Yjk3YmY4NjRhMzU4MTNiNDJkOTk2MmZhMjAwIiwidXNlcl9pZCI6NH0.ar2g0OlUyhgdNplZLsvJ0Y3ONPhrpWH5xug2fmoWrso"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/posts/5
+Method: GET
+Request Headers:
+{
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODcyMjI3LCJpYXQiOjE3NTA4Njg2MjcsImp0aSI6ImQ1NDA5Yjk3YmY4NjRhMzU4MTNiNDJkOTk2MmZhMjAwIiwidXNlcl9pZCI6NH0.ar2g0OlUyhgdNplZLsvJ0Y3ONPhrpWH5xug2fmoWrso"
+}
+
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/posts/5
+Method: GET
+Request Headers:
+{
+  "content-length": "31",
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODcyMjI3LCJpYXQiOjE3NTA4Njg2MjcsImp0aSI6ImQ1NDA5Yjk3YmY4NjRhMzU4MTNiNDJkOTk2MmZhMjAwIiwidXNlcl9pZCI6NH0.ar2g0OlUyhgdNplZLsvJ0Y3ONPhrpWH5xug2fmoWrso",
+  "Content-Type": "application/json"
+}
+Request Body:
+{
+    "art_section": "ACTING"
+}
+
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/search/search/history/
+Method: GET
+Request Headers:
+{
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODcyMjI3LCJpYXQiOjE3NTA4Njg2MjcsImp0aSI6ImQ1NDA5Yjk3YmY4NjRhMzU4MTNiNDJkOTk2MmZhMjAwIiwidXNlcl9pZCI6NH0.ar2g0OlUyhgdNplZLsvJ0Y3ONPhrpWH5xug2fmoWrso"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/app/welcome
+Method: GET
+Request Headers:
+{
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)"
+}
+
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/app/home
+Method: GET
+Request Headers:
+{
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)"
+}
+
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/app/welcome
+Method: GET
+Request Headers:
+{
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)"
+}
+
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/chat/
+Method: POST
+Request Headers:
+{
+  "content-length": "28",
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODcyMjI3LCJpYXQiOjE3NTA4Njg2MjcsImp0aSI6ImQ1NDA5Yjk3YmY4NjRhMzU4MTNiNDJkOTk2MmZhMjAwIiwidXNlcl9pZCI6NH0.ar2g0OlUyhgdNplZLsvJ0Y3ONPhrpWH5xug2fmoWrso",
+  "Content-Type": "application/json"
+}
+Request Body:
+{
+    "other_user_id": 2  
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/chat/
+Method: POST
+Request Headers:
+{
+  "content-length": "28",
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODcyMjI3LCJpYXQiOjE3NTA4Njg2MjcsImp0aSI6ImQ1NDA5Yjk3YmY4NjRhMzU4MTNiNDJkOTk2MmZhMjAwIiwidXNlcl9pZCI6NH0.ar2g0OlUyhgdNplZLsvJ0Y3ONPhrpWH5xug2fmoWrso",
+  "Content-Type": "application/json"
+}
+Request Body:
+{
+    "other_user_id": 2  
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/search/search/history/?text_content=HI
+Method: GET
+Request Headers:
+{
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODcyMjI3LCJpYXQiOjE3NTA4Njg2MjcsImp0aSI6ImQ1NDA5Yjk3YmY4NjRhMzU4MTNiNDJkOTk2MmZhMjAwIiwidXNlcl9pZCI6NH0.ar2g0OlUyhgdNplZLsvJ0Y3ONPhrpWH5xug2fmoWrso"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/chat/
+Method: POST
+Request Headers:
+{
+  "content-length": "15",
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODcyMjI3LCJpYXQiOjE3NTA4Njg2MjcsImp0aSI6ImQ1NDA5Yjk3YmY4NjRhMzU4MTNiNDJkOTk2MmZhMjAwIiwidXNlcl9pZCI6NH0.ar2g0OlUyhgdNplZLsvJ0Y3ONPhrpWH5xug2fmoWrso",
+  "Content-Type": "application/x-www-form-urlencoded"
+}
+Request Body:
+{
+  "text_content": "HI"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/chat/
+Method: POST
+Request Headers:
+{
+  "content-length": "31",
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODcyMjI3LCJpYXQiOjE3NTA4Njg2MjcsImp0aSI6ImQ1NDA5Yjk3YmY4NjRhMzU4MTNiNDJkOTk2MmZhMjAwIiwidXNlcl9pZCI6NH0.ar2g0OlUyhgdNplZLsvJ0Y3ONPhrpWH5xug2fmoWrso",
+  "Content-Type": "application/x-www-form-urlencoded"
+}
+Request Body:
+{
+  "text_content": "HI",
+  "other_user_id": "3"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/chat/
+Method: POST
+Request Headers:
+{
+  "content-length": "31",
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODcyMjI3LCJpYXQiOjE3NTA4Njg2MjcsImp0aSI6ImQ1NDA5Yjk3YmY4NjRhMzU4MTNiNDJkOTk2MmZhMjAwIiwidXNlcl9pZCI6NH0.ar2g0OlUyhgdNplZLsvJ0Y3ONPhrpWH5xug2fmoWrso",
+  "Content-Type": "application/x-www-form-urlencoded"
+}
+Request Body:
+{
+  "text_content": "HI",
+  "other_user_id": "3"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/chat/
+Method: POST
+Request Headers:
+{
+  "content-length": "31",
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODcyMjI3LCJpYXQiOjE3NTA4Njg2MjcsImp0aSI6ImQ1NDA5Yjk3YmY4NjRhMzU4MTNiNDJkOTk2MmZhMjAwIiwidXNlcl9pZCI6NH0.ar2g0OlUyhgdNplZLsvJ0Y3ONPhrpWH5xug2fmoWrso",
+  "Content-Type": "application/x-www-form-urlencoded"
+}
+Request Body:
+{
+  "text_content": "HI",
+  "other_user_id": "3"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/chat/
+Method: POST
+Request Headers:
+{
+  "content-length": "31",
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODcyMjI3LCJpYXQiOjE3NTA4Njg2MjcsImp0aSI6ImQ1NDA5Yjk3YmY4NjRhMzU4MTNiNDJkOTk2MmZhMjAwIiwidXNlcl9pZCI6NH0.ar2g0OlUyhgdNplZLsvJ0Y3ONPhrpWH5xug2fmoWrso",
+  "Content-Type": "application/x-www-form-urlencoded"
+}
+Request Body:
+{
+  "text_content": "HI",
+  "other_user_id": "3"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/chat/
+Method: GET
+Request Headers:
+{
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODcyMjI3LCJpYXQiOjE3NTA4Njg2MjcsImp0aSI6ImQ1NDA5Yjk3YmY4NjRhMzU4MTNiNDJkOTk2MmZhMjAwIiwidXNlcl9pZCI6NH0.ar2g0OlUyhgdNplZLsvJ0Y3ONPhrpWH5xug2fmoWrso"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/chat/
+Method: GET
+Request Headers:
+{
+  "content-length": "33",
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODcyMjI3LCJpYXQiOjE3NTA4Njg2MjcsImp0aSI6ImQ1NDA5Yjk3YmY4NjRhMzU4MTNiNDJkOTk2MmZhMjAwIiwidXNlcl9pZCI6NH0.ar2g0OlUyhgdNplZLsvJ0Y3ONPhrpWH5xug2fmoWrso",
+  "Content-Type": "application/x-www-form-urlencoded"
+}
+Request Body:
+{
+  "other_user_id": "4",
+  "text_content": "\"HI\""
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/chat/
+Method: GET
+Request Headers:
+{
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/chat/
+Method: GET
+Request Headers:
+{
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODcyMjI3LCJpYXQiOjE3NTA4Njg2MjcsImp0aSI6ImQ1NDA5Yjk3YmY4NjRhMzU4MTNiNDJkOTk2MmZhMjAwIiwidXNlcl9pZCI6NH0.ar2g0OlUyhgdNplZLsvJ0Y3ONPhrpWH5xug2fmoWrso"
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/chat/
+Method: POST
+Request Headers:
+{
+  "content-length": "33",
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODcyMjI3LCJpYXQiOjE3NTA4Njg2MjcsImp0aSI6ImQ1NDA5Yjk3YmY4NjRhMzU4MTNiNDJkOTk2MmZhMjAwIiwidXNlcl9pZCI6NH0.ar2g0OlUyhgdNplZLsvJ0Y3ONPhrpWH5xug2fmoWrso",
+  "Content-Type": "application/x-www-form-urlencoded"
+}
+Request Body:
+{
+  "other_user_id": "4",
+  "text_content": "\"HI\""
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/chat/
+Method: POST
+Request Headers:
+{
+  "content-length": "33",
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODcyMjI3LCJpYXQiOjE3NTA4Njg2MjcsImp0aSI6ImQ1NDA5Yjk3YmY4NjRhMzU4MTNiNDJkOTk2MmZhMjAwIiwidXNlcl9pZCI6NH0.ar2g0OlUyhgdNplZLsvJ0Y3ONPhrpWH5xug2fmoWrso",
+  "Content-Type": "application/x-www-form-urlencoded"
+}
+Request Body:
+{
+  "other_user_id": "8",
+  "text_content": "\"HI\""
+}
+
+---------------- Running Request: ----------------
+Request Url: http://127.0.0.1:8000/api/chat/
+Method: POST
+Request Headers:
+{
+  "content-length": "33",
+  "accept-encoding": "gzip, deflate, br",
+  "Accept": "*/*",
+  "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+  "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUwODcyMjI3LCJpYXQiOjE3NTA4Njg2MjcsImp0aSI6ImQ1NDA5Yjk3YmY4NjRhMzU4MTNiNDJkOTk2MmZhMjAwIiwidXNlcl9pZCI6NH0.ar2g0OlUyhgdNplZLsvJ0Y3ONPhrpWH5xug2fmoWrso",
+  "Content-Type": "application/x-www-form-urlencoded"
+}
+Request Body:
+{
+  "other_user_id": "2",
+  "text_content": "\"HI\""
+}
+Error reading file: d:\GraduatedProject\showfani\TSTING\TESTING.txt
+The following imports of Collections and Envs are supported - Postman 2.1.0, Insomnia v4 json, Open API v3 json or yaml files, Thunder Client
