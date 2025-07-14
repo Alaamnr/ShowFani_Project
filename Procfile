@@ -1,1 +1,1 @@
-web: gunicorn showfani.wsgi:application
+web: gunicorn showfani.wsgi:application --log-file -
