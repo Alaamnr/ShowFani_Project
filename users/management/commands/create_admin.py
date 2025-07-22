@@ -1,26 +1,18 @@
-# users/management/commands/create_admin.py
-print("Attempting to load create_admin command module.")
+
 from django.core.management.base import BaseCommand
 from django.contrib.auth import get_user_model
 import os
-import sys 
-import time 
+import sys
+import time
+from datetime import date 
 
 class Command(BaseCommand):
     help = 'Creates a superuser if one does not exist using environment variables.'
 
     def handle(self, *args, **options):
         self.stdout.write("Running create_admin management command...")
-        
-      
-        self.stdout.write("Current Python paths (sys.path):")
-        for p in sys.path:
-            self.stdout.write(f"  - {p}")
-        self.stdout.write("-" * 30)
-        self.stdout.write(f"Django settings module: {os.environ.get('DJANGO_SETTINGS_MODULE')}")
-        self.stdout.write("-" * 30)
 
-        time.sleep(5) 
+   
 
         User = get_user_model()
 
@@ -31,6 +23,15 @@ class Command(BaseCommand):
         phone_number = os.environ.get('DJANGO_SUPERUSER_PHONE_NUMBER', '0000000000')
         country = os.environ.get('DJANGO_SUPERUSER_COUNTRY', 'N/A')
 
+        date_of_birth = os.environ.get('DJANGO_SUPERUSER_DOB', '2000-01-01')
+
+        try:
+            year, month, day = map(int, date_of_birth.split('-'))
+            date_of_birth_obj = date(year, month, day)
+        except ValueError:
+            self.stderr.write(self.style.ERROR(f"Error parsing date of birth: {date_of_birth}. Using default 2000-01-01."))
+            date_of_birth_obj = date(2000, 1, 1)
+
         if not User.objects.filter(username=username).exists():
             User.objects.create_superuser(
                 username=username,
@@ -38,7 +39,8 @@ class Command(BaseCommand):
                 password=password,
                 full_name=full_name,
                 phone_number=phone_number,
-                country=country
+                country=country,
+                date_of_birth=date_of_birth_obj, 
             )
             self.stdout.write(self.style.SUCCESS(f"✔️ Superuser '{username}' created successfully."))
         else:
