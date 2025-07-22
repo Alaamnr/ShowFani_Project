@@ -52,8 +52,8 @@ INSTALLED_APPS = [
     
     'corsheaders',
     'whitenoise.runserver_nostatic',
-   #  'channels',
-     'django_extensions',
+    'django_extensions',
+  
     #my apps
     'users',
     'posts',
