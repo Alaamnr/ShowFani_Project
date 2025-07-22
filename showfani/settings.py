@@ -18,10 +18,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-^6#fzpjdmqwuzd)hb96k)iyy^a+vo91-o+p5-hl%km^@7d*v5u')
 # SECURITY WARNING: don't run with debug turned on in production!
 ########
-#DEBUG = True
+DEBUG = True
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = os.environ.get('DEBUG', 'True') == 'True'
+#DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'showfani-backend.onrender.com']
 
 if not DEBUG:
@@ -224,3 +224,45 @@ if os.environ.get('CREATE_SUPERUSER', 'False') == 'True':
     except Exception as e:
         print("Error creating superuser:", e)
 """
+# settings.py
+
+# ... (باقي إعداداتك)
+
+# --- Start Custom Logging Configuration ---
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
+            'style': '{',
+        },
+        'simple': {
+            'format': '{levelname} {message}',
+            'style': '{',
+        },
+    },
+    'handlers': {
+        'console': {
+            'level': 'DEBUG', # يمكن تغييرها لـ INFO في الإنتاج
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose', # استخدمي verbose هنا للحصول على تفاصيل أكثر
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': 'DEBUG', # تأكدي أنها DEBUG أو INFO
+            'propagate': False, # لا تدعها تنتشر للـ handlers الأخرى لتجنب التكرار
+        },
+        'django.request': { # لسجلات الطلبات والأخطاء
+            'handlers': ['console'],
+            'level': 'ERROR', # لضمان تسجيل أخطاء 500
+            'propagate': False,
+        },
+        '': { # للـ root logger، يلتقط كل السجلات
+            'handlers': ['console'],
+            'level': 'INFO', # يمكن تغييرها لـ DEBUG للحصول على كل شيء
+        },
+    },
+}
