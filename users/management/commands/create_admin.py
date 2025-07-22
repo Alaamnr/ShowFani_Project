@@ -1,5 +1,5 @@
 # users/management/commands/create_admin.py
-
+print("Attempting to load create_admin command module.")
 from django.core.management.base import BaseCommand
 from django.contrib.auth import get_user_model
 import os
