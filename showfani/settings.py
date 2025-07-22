@@ -25,7 +25,7 @@ DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'showfani-backend.onrender.com']
 
 if not DEBUG:
-    # إذا كنتي عايزة تحطي أي روابط إضافية للنطاق مستقبلاً، ضيفيها هون
+ 
     pass
 #ALLOWED_HOSTS = []
 
@@ -52,6 +52,8 @@ INSTALLED_APPS = [
     
     'corsheaders',
     'whitenoise.runserver_nostatic',
+   #  'channels',
+     'django_extensions',
     #my apps
     'users',
     'posts',
@@ -91,7 +93,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'showfani.wsgi.application'
-
+#ASGI_APPLICATION = 'showfani.asgi.application' 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
@@ -103,9 +105,9 @@ DATABASES = {
     }
 }
 
-if os.environ.get('DATABASE_URL'): # تحقق أسهل إذا المتغير موجود
+if os.environ.get('DATABASE_URL'):
     DATABASES['default'] = dj_database_url.config(
-        default=os.environ.get('DATABASE_URL'), # استخدمي default لضمان استخدام URL المتوفر
+        default=os.environ.get('DATABASE_URL'), 
         conn_max_age=600,
         conn_health_checks=True,
     )
@@ -151,7 +153,7 @@ USE_TZ = True
 
 
 
-STATIC_URL = 'static/' # تأكدي إنه موجود مرة واحدة فقط
+STATIC_URL = 'static/' 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
@@ -164,8 +166,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60), # صلاحية توكن الدخول 60 دقيقة
-    'REFRESH_TOKEN_LIFETIME': timedelta(days=7),    # صلاحية توكن التحديث 7 أيام
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60), 
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=7),  
     'ROTATE_REFRESH_TOKENS': True,
     'BLACKLIST_AFTER_ROTATION': True,
     'UPDATE_LAST_LOGIN': False,
@@ -199,5 +201,26 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticated',
     ),
-    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema', # <--- أضيفي هذا السطر
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema', 
 }
+"""
+
+# CHANNEL_LAYERS
+
+REDIS_URL = os.environ.get('REDIS_URL', 'redis://127.0.0.1:6379/1') 
+
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels_redis.core.RedisChannelLayer',
+        'CONFIG': {
+            "url": REDIS_URL, 
+        },
+    },
+}
+if os.environ.get('CREATE_SUPERUSER', 'False') == 'True':
+    try:
+        from users.create_superuser import create
+        create()
+    except Exception as e:
+        print("Error creating superuser:", e)
+"""

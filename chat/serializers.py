@@ -4,6 +4,14 @@ from .models import Chat, Message
 from users.serializers import UserProfileDetailSerializer 
 from users.models import CustomUser
 
+class ChatCreateSerializer(serializers.Serializer):
+    other_user_id = serializers.IntegerField(
+        help_text="ID of the user to start a chat with",
+        required=True
+    )
+   
+
+
 class ChatParticipantSerializer(serializers.ModelSerializer):
     class Meta:
         model = CustomUser
@@ -21,6 +29,7 @@ class MessageSerializer(serializers.ModelSerializer):
             'message_type', 'text_content', 'file_attachment', 'timestamp'
         ]
         read_only_fields = ['id', 'chat', 'sender', 'sender_username', 'sender_profile_picture', 'timestamp']
+        
 
     def validate(self, data):
 

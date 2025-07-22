@@ -212,7 +212,7 @@ class UserProfileDetailSerializer(serializers.ModelSerializer):
             'date_of_birth', 'age', 'profile_picture', 'user_type', 
             'artist_profile', 'investor_profile','posts'
         ]
-        read_only_fields = ['username',  'age', 'user_type'] 
+        read_only_fields = [ 'age', 'user_type'] 
         extra_kwargs = {
             'password': {'write_only': True, 'required': False},
             'confirm_password': {'write_only': True, 'required': False},
@@ -232,12 +232,19 @@ class UserProfileDetailSerializer(serializers.ModelSerializer):
         if 'phone_number' in data:
             if CustomUser.objects.filter(phone_number=data['phone_number']).exists() and self.instance.phone_number != data['phone_number']:
                 raise serializers.ValidationError({"phone_number": "رقم الهاتف هذا مسجل بالفعل."})
+            
+        if 'username' in data:
+            new_username = data['username']
+          
+            if CustomUser.objects.filter(username__iexact=new_username).exists() and self.instance.username.lower() != new_username.lower():
+                raise serializers.ValidationError({"username": "اسم المستخدم هذا مستخدم بالفعل."})
+      
         return data
     def update(self, instance, validated_data):
      
         validated_data.pop('user_type', None)
    
-        validated_data.pop('username', None)
+       
 
      
         for attr, value in validated_data.items():
@@ -250,4 +257,4 @@ class UserSearchResultSerializer(serializers.ModelSerializer):
     class Meta:
         model = CustomUser
         fields = ['username', 'full_name', 'profile_picture', 'user_type', 'country']
-        read_only_fields = ['username', 'full_name', 'profile_picture', 'user_type', 'country']
+        read_only_fields = [ 'full_name', 'profile_picture', 'user_type', 'country']

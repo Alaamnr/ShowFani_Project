@@ -28,7 +28,7 @@ class SearchView(APIView):
 
         SearchHistory.objects.create(user=request.user, query=query)
 
-        # فينا نبحث عن اي نص تابع لبوست وكمان عم نعمل بحث عن اسم صاحب البوست هي زيادة
+        
 
         posts = Post.objects.filter(
             Q(description__icontains=query) |
@@ -37,7 +37,8 @@ class SearchView(APIView):
 
         
         users = CustomUser.objects.filter(
-            Q(full_name__icontains=query)
+            Q(full_name__icontains=query) |
+            Q(username__icontains=query)
         ).exclude(id=request.user.id)
 
         return Response({
