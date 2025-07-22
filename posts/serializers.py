@@ -37,19 +37,20 @@ class PostSerializer(serializers.ModelSerializer):
         if obj.video:
             types.append('video')
         return types
-
     def get_owner_id_type(self, obj):
-     
+ 
         try:
           
-            if hasattr(obj.owner, 'artist_profile') and obj.owner.artist_profile:
+            if hasattr(obj.owner, 'artist_profile') and obj.owner.artist_profile is not None:
                 return obj.owner.artist_profile.id
-            elif hasattr(obj.owner, 'investor_profile') and obj.owner.investor_profile:
+         
+            elif hasattr(obj.owner, 'investor_profile') and obj.owner.investor_profile is not None:
                 return obj.owner.investor_profile.id
         except (Artist.DoesNotExist, Investor.DoesNotExist):
-           
+        
             pass
-        return None 
+        return None
+    
 
 
     def validate(self, data):
