@@ -1,14 +1,24 @@
-
-# users/create_superuser.py
+# users/scripts/create_superuser.py (أو users/create_superuser.py إذا لم يتم نقله)
 
 import os
-import django 
+import django
 from django.contrib.auth import get_user_model
+import sys 
+import time 
 
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'showfani.settings')
-django.setup() 
+django.setup()
 
+
+print("Current Python paths (sys.path):")
+for p in sys.path:
+    print(f"  - {p}")
+print("-" * 30)
+print("Django settings module:", os.environ.get('DJANGO_SETTINGS_MODULE'))
+print("-" * 30)
+
+time.sleep(5) 
 def create():
     User = get_user_model()
 
@@ -33,5 +43,4 @@ def create():
         print(f"ℹ️ Superuser '{username}' already exists.")
 
 if __name__ == '__main__':
-
     create()
