@@ -1,25 +1,18 @@
-
-from pathlib import Path
-from datetime import timedelta
 import dj_database_url
 import os
+from pathlib import Path
+from datetime import timedelta
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
 #SECRET_KEY = 'django-insecure-^6#fzpjdmqwuzd)hb96k)iyy^a+vo91-o+p5-hl%km^@7d*v5u'
-# SECURITY WARNING: keep the secret key used in production secret!
+
 
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-^6#fzpjdmqwuzd)hb96k)iyy^a+vo91-o+p5-hl%km^@7d*v5u')
-# SECURITY WARNING: don't run with debug turned on in production!
-########
+
 DEBUG = True
-# SECURITY WARNING: don't run with debug turned on in production!
+
 
 #DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'showfani-backend.onrender.com']
@@ -49,6 +42,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt', 
     'drf_spectacular',
+    'cloudinary',
+    'cloudinary_storage',
     
     'corsheaders',
     'whitenoise.runserver_nostatic',
@@ -117,9 +112,6 @@ if os.environ.get('DATABASE_URL'):
 CORS_ALLOW_ALL_ORIGINS = True 
 
 
-# Password validation
-# https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -136,8 +128,6 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-# Internationalization
-# https://docs.djangoproject.com/en/5.2/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
 
@@ -148,23 +138,19 @@ USE_I18N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/5.2/howto/static-files/
-
-
 
 STATIC_URL = 'static/' 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+MEDIA_URL = '/media/' 
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
-# Default primary key field type
-# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
+CLOUDINARY_CLOUD_NAME = os.environ.get('CLOUDINARY_CLOUD_NAME')
+CLOUDINARY_API_KEY = os.environ.get('CLOUDINARY_API_KEY')      
+CLOUDINARY_API_SECRET = os.environ.get('CLOUDINARY_API_SECRET') 
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60), 
     'REFRESH_TOKEN_LIFETIME': timedelta(days=7),  
@@ -224,11 +210,6 @@ if os.environ.get('CREATE_SUPERUSER', 'False') == 'True':
     except Exception as e:
         print("Error creating superuser:", e)
 """
-# settings.py
-
-# ... (باقي إعداداتك)
-
-# --- Start Custom Logging Configuration ---
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
