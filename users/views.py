@@ -9,7 +9,10 @@ from .serializers import (
     ArtistProfileSerializer, InvestorProfileSerializer ,CustomTokenObtainPairSerializer,ChangePasswordSerializer 
 )
 from .models import CustomUser, Artist, Investor
+import cloudinary.uploader
+from rest_framework.views import APIView
 
+from rest_framework.parsers import MultiPartParser
 class ArtistRegisterView(generics.CreateAPIView):
     queryset = CustomUser.objects.all()
     permission_classes = (AllowAny,)
@@ -93,3 +96,13 @@ class PublicUserProfileView(generics.RetrieveAPIView):
     serializer_class = UserProfileDetailSerializer
     permission_classes = [AllowAny] 
     lookup_field = 'username'
+
+
+
+class TestUploadView(APIView):
+    parser_classes = [MultiPartParser]
+
+    def post(self, request):
+        file = request.FILES.get('file')
+        result = cloudinary.uploader.upload(file)
+        return Response({'url': result['secure_url']})
