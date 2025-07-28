@@ -23,3 +23,5 @@ django-extensions
 cloudinary
 django-cloudinary-storage
 djangorestframework_simplejwt==5.2.2
+setuptools
+importlib-metadata
