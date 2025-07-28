@@ -11,13 +11,13 @@ class CustomUserAdmin(UserAdmin):
     list_filter = ('is_staff', 'is_active', 'is_superuser', 'country')
 
     fieldsets = UserAdmin.fieldsets + (
-        (None, {'fields': ('full_name', 'phone_number', 'country', 'date_of_birth', 'profile_picture', 'email')}),
+        (None, {'fields': ('full_name', 'phone_number', 'country', 'date_of_birth', 'profile_picture')}),
     )
 
     add_fieldsets = UserAdmin.add_fieldsets + (
         (None, {
             'classes': ('wide',),
-            'fields': ('full_name', 'phone_number', 'country', 'date_of_birth', 'profile_picture', 'email'),
+            'fields': ('full_name', 'phone_number', 'country', 'date_of_birth', 'profile_picture'),
         }),
     )
 
