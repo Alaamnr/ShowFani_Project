@@ -16,7 +16,7 @@ class CustomUser(AbstractUser):
     country = models.CharField(max_length=100, blank=False, null=False)
     date_of_birth = models.DateField(blank=False, null=False)
     age = models.PositiveIntegerField(blank=True, null=True) 
-    profile_picture = models.ImageField(upload_to='profile_pics/', blank=True, null=True)
+    profile_picture = CloudinaryField(resource_type='image', blank=True, null=True)
     email = models.EmailField(unique=True, blank=False, null=False)
 
     

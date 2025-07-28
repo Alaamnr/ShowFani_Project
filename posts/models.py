@@ -11,8 +11,13 @@ class Post(models.Model):
     ]
     art_section = models.CharField(max_length=50, choices=ART_SECTION_CHOICES, blank=False, null=False)
     description = models.TextField(blank=True, null=True)
-    picture = models.ImageField(upload_to='post_pictures/', blank=True, null=True)
-    video = models.FileField(upload_to='post_videos/', blank=True, null=True,max_length=255)
+    picture = CloudinaryField(
+    resource_type='image',
+    blank=True,
+    null=True,
+)
+
+    video = CloudinaryField(resource_type='video', blank=True, null=True)
     views_count = models.PositiveIntegerField(default=0)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

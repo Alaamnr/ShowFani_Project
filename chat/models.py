@@ -33,12 +33,10 @@ class Message(models.Model):
  
     text_content = models.TextField(blank=True, null=True) 
     
-    file_attachment = models.FileField(
-        upload_to='chat_attachments/', 
-        blank=True,
-        null=True,
-        max_length=255 
-    )
+    file_attachment = CloudinaryField(
+    resource_type='auto', 
+    null=True,
+)
     
     timestamp = models.DateTimeField(auto_now_add=True)
 
