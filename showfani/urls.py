@@ -8,12 +8,12 @@ from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
 urlpatterns = [
 
-    path('api/users/', include('users.urls')),
-    path('api/posts/', include('posts.urls')),
-    path('api/chat/', include('chat.urls')),
-    path('api/filters/', include('filters.urls')),
-    path('api/search/', include('search.urls')),
-    path('api/app/', include('app.urls')), 
+    path('api/users/', include(('users.urls', 'users'), namespace='users')),
+    path('api/posts/', include(('posts.urls', 'posts'), namespace='posts')),
+    path('api/chat/', include(('chat.urls', 'chat'), namespace='chat')),
+    path('api/filters/', include(('filters.urls', 'filters'), namespace='filters')),
+    path('api/search/', include(('search.urls', 'search'), namespace='search')),
+    path('api/app/', include(('app.urls', 'app'), namespace='app')),
     
     #path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
@@ -30,4 +30,4 @@ urlpatterns = [
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_URL)
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) 

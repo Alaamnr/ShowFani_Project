@@ -13,7 +13,6 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-^6#fzpjdmqwuzd)hb96k)
 
 DEBUG = True
 
-
 #DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'showfani-backend.onrender.com']
 
