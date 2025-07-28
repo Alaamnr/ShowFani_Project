@@ -1,6 +1,6 @@
 from django.db import models
 from users.models import CustomUser
-
+from cloudinary.models import CloudinaryField
 class Chat(models.Model):
   
     participants = models.ManyToManyField(

@@ -3,6 +3,7 @@ from django.contrib.auth.models import AbstractUser
 from django.db import models
 from django.core.exceptions import ValidationError
 import datetime
+from cloudinary.models import CloudinaryField
 
 class CustomUser(AbstractUser):
     USER_TYPE_CHOICES = (

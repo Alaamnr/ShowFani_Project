@@ -1,5 +1,6 @@
 from django.db import models
 from users.models import CustomUser, Artist, Investor
+from cloudinary.models import CloudinaryField
 
 class Post(models.Model):
     owner = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name='posts')
