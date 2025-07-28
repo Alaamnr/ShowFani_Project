@@ -1,6 +1,6 @@
 from django.urls import path
 from .views import SearchView, SearchHistoryView, ClearSearchHistoryView
-
+app_name = 'search'
 urlpatterns = [
     path('search/', SearchView.as_view(), name='search'),
     path('search/history/', SearchHistoryView.as_view(), name='search_history'),

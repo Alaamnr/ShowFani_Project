@@ -4,7 +4,7 @@ from .views import (
     ArtistRegisterView, InvestorRegisterView, CustomTokenObtainPairView,
     UserProfileView, PublicUserProfileView,ChangePasswordView
 )
-
+app_name = 'users' 
 urlpatterns = [
     path('register/artist/', ArtistRegisterView.as_view(), name='artist_register'),
     path('register/investor/', InvestorRegisterView.as_view(), name='investor_register'),
