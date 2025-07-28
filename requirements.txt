@@ -24,4 +24,5 @@ cloudinary
 django-cloudinary-storage
 setuptools
 importlib-metadata
-djangorestframework_simplejwt==5.0.0
+
+djangorestframework_simplejwt==5.5.0
