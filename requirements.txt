@@ -4,7 +4,6 @@ dj-database-url==3.0.1
 Django==5.2.3
 django-filter==25.1
 djangorestframework==3.16.0
-djangorestframework_simplejwt==5.5.0
 filelock==3.17.0
 graphviz==0.21
 gunicorn==23.0.0
@@ -23,3 +22,4 @@ drf-spectacular
 django-extensions
 cloudinary
 django-cloudinary-storage
+djangorestframework_simplejwt==5.2.2
