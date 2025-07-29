@@ -1,5 +1,5 @@
 from django.db import models
-from users.models import CustomUser, Artist, Investor
+from users.models import CustomUser
 from cloudinary.models import CloudinaryField
 
 class Post(models.Model):
@@ -11,12 +11,7 @@ class Post(models.Model):
     ]
     art_section = models.CharField(max_length=50, choices=ART_SECTION_CHOICES, blank=False, null=False)
     description = models.TextField(blank=True, null=True)
-    picture = CloudinaryField(
-    resource_type='image',
-    blank=True,
-    null=True,
-)
-
+    picture = CloudinaryField(resource_type='image', blank=True, null=True)
     video = CloudinaryField(resource_type='video', blank=True, null=True)
     views_count = models.PositiveIntegerField(default=0)
     created_at = models.DateTimeField(auto_now_add=True)

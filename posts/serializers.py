@@ -1,16 +1,25 @@
 from rest_framework import serializers
 from .models import Post
 from users.models import Artist, Investor 
+from cloudinary.models import CloudinaryField
 
 class PostSerializer(serializers.ModelSerializer):
     owner_username = serializers.CharField(source='owner.username', read_only=True)
     owner_full_name = serializers.CharField(source='owner.full_name', read_only=True)
     owner_type = serializers.SerializerMethodField()
-    owner_profile_picture = serializers.ImageField(source='owner.profile_picture', read_only=True)
+    
+    owner_profile_picture = serializers.SerializerMethodField()
     content_types = serializers.SerializerMethodField()
+
+    picture = serializers.FileField(required=False, allow_null=True)
+    video = serializers.FileField(required=False, allow_null=True)
+    
 
   
     owner_id_type = serializers.SerializerMethodField()
+    def get_owner_profile_picture(self, obj):
+      pic = getattr(obj.owner, 'profile_picture', None)
+      return pic.url if pic else None
     
 
     class Meta:
@@ -19,7 +28,7 @@ class PostSerializer(serializers.ModelSerializer):
             'id', 'owner', 'owner_username', 'owner_full_name', 'owner_type',
             'art_section',  'owner_id_type', 'owner_profile_picture', 'content_types','description', 'picture', 'video', 'views_count', 'created_at'
         ]
-        read_only_fields = ['owner', 'views_count', 'created_at', 'updated_at']
+        read_only_fields = ['owner', 'views_count', 'created_at', 'updated_at','id']
 
     def get_owner_type(self, obj):
         if hasattr(obj.owner, 'artist_profile'):
@@ -37,6 +46,7 @@ class PostSerializer(serializers.ModelSerializer):
         if obj.video:
             types.append('video')
         return types
+
 
     def get_owner_id_type(self, obj):
         try:

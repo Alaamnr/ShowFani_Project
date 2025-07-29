@@ -4,7 +4,8 @@ from .models import CustomUser, Artist, Investor
 from django.contrib.auth.password_validation import validate_password
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from posts.serializers import PostSerializer 
-
+from cloudinary.models import CloudinaryField
+from posts.serializers import PostSerializer
 class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
 
     username_or_email = serializers.CharField(write_only=True)
@@ -63,6 +64,7 @@ class CustomUserSerializer(serializers.ModelSerializer):
     confirm_password = serializers.CharField(write_only=True, required=True)
  
     user_type = serializers.ChoiceField(choices=CustomUser.USER_TYPE_CHOICES, required=True)
+    profile_picture = serializers.FileField(required=False, allow_null=True)
 
 
     class Meta:
@@ -89,7 +91,8 @@ class CustomUserSerializer(serializers.ModelSerializer):
         return data
 
     def create(self, validated_data):
-     
+   
+
         validated_data.pop('confirm_password') 
         user = CustomUser.objects.create_user(
             username=validated_data['username'],
@@ -102,29 +105,12 @@ class CustomUserSerializer(serializers.ModelSerializer):
             profile_picture=validated_data.get('profile_picture'),
             user_type=validated_data['user_type'] 
         )
-        return user   
+        return user  
 
     
 
 
-    def create(self, validated_data):
-     
-        if not validated_data.get('password') or not validated_data.get('confirm_password'):
-            raise serializers.ValidationError({"detail": "Password and confirm_password are required for new user creation."})
-
-        validated_data.pop('confirm_password') 
-        user = CustomUser.objects.create_user(
-            username=validated_data['username'],
-            email=validated_data['email'],
-            password=validated_data['password'],
-            full_name=validated_data['full_name'],
-            phone_number=validated_data['phone_number'],
-            country=validated_data['country'],
-            date_of_birth=validated_data['date_of_birth'],
-            profile_picture=validated_data.get('profile_picture'),
-            user_type=validated_data['user_type'] 
-        )
-        return user
+    
 
 class ArtistProfileSerializer(serializers.ModelSerializer):
     class Meta:

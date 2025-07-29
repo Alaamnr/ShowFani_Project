@@ -23,6 +23,7 @@ class Message(models.Model):
         ('TEXT', 'Text'),
         ('AUDIO', 'Audio'),
         ('FILE', 'File'),
+        ('IMAGE', 'Image'), 
     ]
     message_type = models.CharField(
         max_length=10,
@@ -33,10 +34,12 @@ class Message(models.Model):
  
     text_content = models.TextField(blank=True, null=True) 
     
+
     file_attachment = CloudinaryField(
-    resource_type='auto', 
-    null=True,
-)
+        resource_type='auto',
+        blank=True,
+        null=True,
+    )
     
     timestamp = models.DateTimeField(auto_now_add=True)
 
@@ -59,11 +62,11 @@ class Message(models.Model):
         if self.text_content and self.message_type != 'TEXT':
             raise ValidationError("If text content is present, message_type must be 'TEXT'.")
         
-        if self.file_attachment and self.message_type == 'TEXT':
-            raise ValidationError("If a file attachment is present, message_type cannot be 'TEXT'. It must be 'AUDIO' or 'FILE'.")
-
-        if self.file_attachment and self.message_type not in ['AUDIO', 'FILE']:
-            raise ValidationError("If a file attachment is present, message_type must be 'AUDIO' or 'FILE'.")
-
+        if self.file_attachment:
+            if self.message_type == 'TEXT':
+                 raise ValidationError("If a file attachment is present, message_type cannot be 'TEXT'.")
+            if self.message_type not in ['AUDIO', 'FILE', 'IMAGE']: 
+                raise ValidationError("If a file attachment is present, message_type must be 'AUDIO', 'FILE', or 'IMAGE'.")
     def __str__(self):
+        self.full_clean() 
         return f"Message from {self.sender.username} in Chat {self.chat.id} at {self.timestamp.strftime('%Y-%m-%d %H:%M')}"

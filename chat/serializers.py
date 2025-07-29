@@ -47,8 +47,8 @@ class MessageSerializer(serializers.ModelSerializer):
             if message_type != 'TEXT':
                 raise serializers.ValidationError("If 'text_content' is provided, 'message_type' must be 'TEXT'.")
         elif file_attachment_provided:
-            if message_type not in ['AUDIO', 'FILE']:
-                raise serializers.ValidationError("If 'file_attachment' is provided, 'message_type' must be 'AUDIO' or 'FILE'.")
+            if message_type not in ['AUDIO', 'FILE', 'IMAGE']:
+                raise serializers.ValidationError("If 'file_attachment' is provided, 'message_type' must be 'AUDIO', 'FILE', or 'IMAGE'.")
         
         return data
 
