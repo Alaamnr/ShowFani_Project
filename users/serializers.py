@@ -186,6 +186,8 @@ class ChangePasswordSerializer(serializers.Serializer):
         self.user.set_password(self.validated_data['password'])
         self.user.save() 
         return self.user
+
+
 class UserProfileDetailSerializer(serializers.ModelSerializer):
     artist_profile = ArtistProfileSerializer(read_only=True)
     investor_profile = InvestorProfileSerializer(read_only=True)
@@ -198,46 +200,44 @@ class UserProfileDetailSerializer(serializers.ModelSerializer):
             'date_of_birth', 'age', 'profile_picture', 'user_type', 
             'artist_profile', 'investor_profile','posts'
         ]
-        read_only_fields = [ 'age', 'user_type'] 
+        read_only_fields = [ 'age', 'user_type', 'posts'] 
         extra_kwargs = {
             'password': {'write_only': True, 'required': False},
             'confirm_password': {'write_only': True, 'required': False},
             #'email': {'read_only': True}, تعديل الايميل مسموح حاليا
         }
-    def validate(self, data):
-    
-        if 'password' in data or 'confirm_password' in data:
-            raise serializers.ValidationError({"detail": "لا يمكن تحديث كلمة السر من خلال هذا الـ API. الرجاء استخدام /api/users/change-password/."})
 
-   
-        if 'email' in data:
-            if CustomUser.objects.filter(email=data['email']).exists() and self.instance.email != data['email']:
-                raise serializers.ValidationError({"email": "هذا البريد الإلكتروني مسجل بالفعل."})
-        
-
-        if 'phone_number' in data:
-            if CustomUser.objects.filter(phone_number=data['phone_number']).exists() and self.instance.phone_number != data['phone_number']:
-                raise serializers.ValidationError({"phone_number": "رقم الهاتف هذا مسجل بالفعل."})
-            
-        if 'username' in data:
-            new_username = data['username']
-          
-            if CustomUser.objects.filter(username__iexact=new_username).exists() and self.instance.username.lower() != new_username.lower():
-                raise serializers.ValidationError({"username": "اسم المستخدم هذا مستخدم بالفعل."})
-      
-        return data
     def update(self, instance, validated_data):
-     
+        artist_profile_data = validated_data.pop('artist_profile', None)
+        investor_profile_data = validated_data.pop('investor_profile', None)
+        
+        instance = super().update(instance, validated_data)
         validated_data.pop('user_type', None)
+
+        if artist_profile_data and hasattr(instance, 'artist_profile'):
+            artist_serializer = ArtistProfileSerializer(instance.artist_profile, data=artist_profile_data, partial=True)
+            if artist_serializer.is_valid(raise_exception=True):
+                artist_serializer.save()
+
+
+
+        elif investor_profile_data and hasattr(instance, 'investor_profile'):
+            investor_serializer = InvestorProfileSerializer(instance.investor_profile, data=investor_profile_data, partial=True)
+            if investor_serializer.is_valid(raise_exception=True):
+                investor_serializer.save()
+
+        return instance
+
+        
    
        
 
      
-        for attr, value in validated_data.items():
+"""        for attr, value in validated_data.items():
             setattr(instance, attr, value)
         
         instance.save()
-        return instance
+        return instance"""
 
 class UserSearchResultSerializer(serializers.ModelSerializer):
     class Meta:

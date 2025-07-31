@@ -6,6 +6,8 @@ from .models import Post
 from .serializers import PostSerializer
 from django.db.models import F
 from rest_framework.views import APIView
+from rest_framework.parsers import MultiPartParser, FormParser
+from cloudinary.uploader import upload
 
 # Create your views here.
 
@@ -61,3 +63,34 @@ class RandomPostsView(generics.ListAPIView):
 
     def get_queryset(self):
         return Post.objects.order_by('?')[:self.PAGE_SIZE] 
+    
+
+
+class MediaUploadView(APIView):
+  
+    parser_classes = [MultiPartParser, FormParser]
+    permission_classes = [IsAuthenticated]
+
+    def post(self, request, *args, **kwargs):
+        file_obj = request.FILES.get('file')
+
+        if not file_obj:
+            return Response({"error": "No file was provided."}, status=status.HTTP_400_BAD_REQUEST)
+
+        try:
+   
+            upload_result = upload(file_obj, resource_type='auto')
+            
+      
+            if upload_result and 'secure_url' in upload_result:
+                file_url = upload_result['secure_url']
+                return Response({
+                    "message": "File uploaded successfully.",
+                    "file_url": file_url,
+                    "public_id": upload_result['public_id']
+                }, status=status.HTTP_201_CREATED)
+            else:
+                return Response({"error": "Failed to upload file to Cloudinary."}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+        except Exception as e:
+            return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
