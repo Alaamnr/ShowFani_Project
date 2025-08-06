@@ -7,6 +7,13 @@ class Post(models.Model):
     ART_SECTION_CHOICES = [
         ('ACTING', 'Acting'),
         ('WRITING', 'Writing'),
+        ('SINGING', 'Singing'),
+        ('DANCING', 'Dancing'),
+        ('PAINTING', 'Painting'),
+        ('SCULPTURE', 'Sculpture'),
+        ('PHOTOGRAPHY', 'Photography'),
+        ('MUSIC_COMPOSITION', 'Music Composition'),
+        ('DIRECTING', 'Directing'),
         ('OTHER', 'Other'),
     ]
     art_section = models.CharField(max_length=50, choices=ART_SECTION_CHOICES, blank=False, null=False)

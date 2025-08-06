@@ -13,6 +13,7 @@ class PostSerializer(serializers.ModelSerializer):
 
     picture = serializers.FileField(required=False, allow_null=True)
     video = serializers.FileField(required=False, allow_null=True)
+    post_type = serializers.SerializerMethodField()
     
 
   
@@ -20,13 +21,36 @@ class PostSerializer(serializers.ModelSerializer):
     def get_owner_profile_picture(self, obj):
       pic = getattr(obj.owner, 'profile_picture', None)
       return pic.url if pic else None
+
     
+    def get_post_type(self, obj):
+       
+        if obj.video:
+            return 'video'
+
+        elif obj.picture:
+            return 'image'
+
+        elif obj.description:
+            return 'text'
+        return None 
+
+    def get_content_types(self, obj):
+ 
+        types = []
+        if obj.description:
+            types.append('text')
+        if obj.picture:
+            types.append('image')
+        if obj.video:
+            types.append('video')
+        return types
 
     class Meta:
         model = Post
         fields = [
             'id', 'owner', 'owner_username', 'owner_full_name', 'owner_type',
-            'art_section',  'owner_id_type', 'owner_profile_picture', 'content_types','description', 'picture', 'video', 'views_count', 'created_at'
+            'art_section',  'owner_id_type', 'owner_profile_picture',  'post_type', 'content_types','description', 'picture', 'video', 'views_count', 'created_at'
         ]
         read_only_fields = ['owner', 'views_count', 'created_at', 'updated_at','id']
 
@@ -36,16 +60,6 @@ class PostSerializer(serializers.ModelSerializer):
         elif hasattr(obj.owner, 'investor_profile'):
             return 'investor'
         return 'unknown'
-    def get_content_types(self, obj):
-    
-        types = []
-        if obj.description:
-            types.append('text')
-        if obj.picture:
-            types.append('image')
-        if obj.video:
-            types.append('video')
-        return types
 
 
     def get_owner_id_type(self, obj):

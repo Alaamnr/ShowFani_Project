@@ -5,17 +5,15 @@ from django.contrib.auth.password_validation import validate_password
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from posts.serializers import PostSerializer 
 from cloudinary.models import CloudinaryField
-from posts.serializers import PostSerializer
-class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
 
+class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
     username_or_email = serializers.CharField(write_only=True)
     password = serializers.CharField(write_only=True)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields.pop('username', None) 
-     
-
+    
     def validate(self, attrs):
         username_or_email = attrs.get('username_or_email')
         password = attrs.get('password')
@@ -25,20 +23,17 @@ class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
         if not password:
             raise serializers.ValidationError({"detail": "Password is required."})
 
-      
         user = None
         if '@' in username_or_email: 
             try:
-         
                 temp_user = CustomUser.objects.get(email__iexact=username_or_email)
                 if temp_user.check_password(password):
                     user = temp_user
             except CustomUser.DoesNotExist:
                 pass
-
+        
         if not user:
             try:
-  
                 temp_user = CustomUser.objects.get(username__iexact=username_or_email)
                 if temp_user.check_password(password): 
                     user = temp_user
@@ -48,24 +43,17 @@ class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
             raise serializers.ValidationError({"detail": "No active account found with the given credentials."})
 
         attrs['username'] = user.username
-
         attrs['password'] = password 
         data = super().validate(attrs)
         data['user_type'] = user.user_type
-     
-        return data
-       # data = super().validate(attrs)
-
+        
         return data
 
 class CustomUserSerializer(serializers.ModelSerializer):
-    #هون False قلبتو ترووووووووو
     password = serializers.CharField(write_only=True, required=True, validators=[validate_password])
     confirm_password = serializers.CharField(write_only=True, required=True)
- 
     user_type = serializers.ChoiceField(choices=CustomUser.USER_TYPE_CHOICES, required=True)
     profile_picture = serializers.FileField(required=False, allow_null=True)
-
 
     class Meta:
         model = CustomUser
@@ -76,13 +64,13 @@ class CustomUserSerializer(serializers.ModelSerializer):
         extra_kwargs = {
             'password': {'write_only': True},
             'confirm_password': {'write_only': True},
-            'age': {'read_only': True}, # العمر يُحسب تلقائيا
+            'age': {'read_only': True},
         }
+
     def validate(self, data):
-      
         if data['password'] != data['confirm_password']:
             raise serializers.ValidationError({"confirm_password": "كلمة السر وتأكيدها غير متطابقين."})
-
+        
         if CustomUser.objects.filter(email=data['email']).exists():
             raise serializers.ValidationError({"email": "هذا البريد الإلكتروني مسجل بالفعل."})
         if CustomUser.objects.filter(phone_number=data['phone_number']).exists():
@@ -91,8 +79,6 @@ class CustomUserSerializer(serializers.ModelSerializer):
         return data
 
     def create(self, validated_data):
-   
-
         validated_data.pop('confirm_password') 
         user = CustomUser.objects.create_user(
             username=validated_data['username'],
@@ -105,12 +91,7 @@ class CustomUserSerializer(serializers.ModelSerializer):
             profile_picture=validated_data.get('profile_picture'),
             user_type=validated_data['user_type'] 
         )
-        return user  
-
-    
-
-
-    
+        return user 
 
 class ArtistProfileSerializer(serializers.ModelSerializer):
     class Meta:
@@ -120,7 +101,7 @@ class ArtistProfileSerializer(serializers.ModelSerializer):
 class InvestorProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = Investor
-        fields = ['support_type', 'own_art_company', 'company_name', 'company_art_field', 'art_section', 'what_i_need', 'bio'] # إضافة art_section
+        fields = ['support_type', 'own_art_company', 'company_name', 'company_art_field', 'art_section', 'what_i_need', 'bio']
         extra_kwargs = {
             'company_name': {'required': False},
             'company_art_field': {'required': False},
@@ -160,21 +141,15 @@ class InvestorRegistrationSerializer(CustomUserSerializer):
         return user
 
 class ChangePasswordSerializer(serializers.Serializer):
-    
     email = serializers.EmailField(required=True) 
-  
     password = serializers.CharField(write_only=True, required=True, validators=[validate_password])
-   
     confirm_password = serializers.CharField(write_only=True, required=True)
 
     def validate(self, data):
-      
         if data['password'] != data['confirm_password']:
             raise serializers.ValidationError({"confirm_password": "كلمة السر وتأكيدها غير متطابقين."})
         
-      
         try:
-          
             self.user = CustomUser.objects.get(email__iexact=data['email'])
         except CustomUser.DoesNotExist:
             raise serializers.ValidationError({"email": "لا يوجد مستخدم مسجل بهذا البريد الإلكتروني."})
@@ -182,11 +157,9 @@ class ChangePasswordSerializer(serializers.Serializer):
         return data
 
     def save(self, **kwargs):
-    
         self.user.set_password(self.validated_data['password'])
         self.user.save() 
         return self.user
-
 
 class UserProfileDetailSerializer(serializers.ModelSerializer):
     artist_profile = ArtistProfileSerializer(read_only=True)
@@ -204,40 +177,40 @@ class UserProfileDetailSerializer(serializers.ModelSerializer):
         extra_kwargs = {
             'password': {'write_only': True, 'required': False},
             'confirm_password': {'write_only': True, 'required': False},
-            #'email': {'read_only': True}, تعديل الايميل مسموح حاليا
         }
+    
+    def validate(self, data):
+     
+        if 'email' in data:
+            if CustomUser.objects.filter(email=data['email']).exists() and self.instance.email != data['email']:
+                raise serializers.ValidationError({"email": "هذا البريد الإلكتروني مسجل بالفعل."})
+        
+        if 'phone_number' in data:
+            if CustomUser.objects.filter(phone_number=data['phone_number']).exists() and self.instance.phone_number != data['phone_number']:
+                raise serializers.ValidationError({"phone_number": "رقم الهاتف هذا مسجل بالفعل."})
+            
+        if 'username' in data:
+            new_username = data['username']
+            if CustomUser.objects.filter(username__iexact=new_username).exclude(id=self.instance.id).exists():
+                raise serializers.ValidationError({"username": "اسم المستخدم هذا مستخدم بالفعل."})
+        
+        return data
 
     def update(self, instance, validated_data):
-        artist_profile_data = validated_data.pop('artist_profile', None)
-        investor_profile_data = validated_data.pop('investor_profile', None)
-        
-        instance = super().update(instance, validated_data)
         validated_data.pop('user_type', None)
+        instance = super().update(instance, validated_data)
 
-        if artist_profile_data and hasattr(instance, 'artist_profile'):
+        if hasattr(instance, 'artist_profile'):
+            artist_profile_data = validated_data.pop('artist_profile', {})
             artist_serializer = ArtistProfileSerializer(instance.artist_profile, data=artist_profile_data, partial=True)
             if artist_serializer.is_valid(raise_exception=True):
                 artist_serializer.save()
-
-
-
-        elif investor_profile_data and hasattr(instance, 'investor_profile'):
+        elif hasattr(instance, 'investor_profile'):
+            investor_profile_data = validated_data.pop('investor_profile', {})
             investor_serializer = InvestorProfileSerializer(instance.investor_profile, data=investor_profile_data, partial=True)
             if investor_serializer.is_valid(raise_exception=True):
                 investor_serializer.save()
-
         return instance
-
-        
-   
-       
-
-     
-"""        for attr, value in validated_data.items():
-            setattr(instance, attr, value)
-        
-        instance.save()
-        return instance"""
 
 class UserSearchResultSerializer(serializers.ModelSerializer):
     class Meta:

@@ -34,17 +34,19 @@ class PostFilterView(generics.ListAPIView):
             elif user_type.lower() == 'investor':
                 queryset = queryset.filter(owner__investor_profile__isnull=False)
 
-        """if min_age:
-            queryset = queryset.filter(owner__age__gte=min_age)
-        if max_age:
-            queryset = queryset.filter(owner__age__lte=max_age)"""
-        if age:
+        if min_age:
             try:
-                age = int(age)
-                queryset = queryset.filter(owner__age=age) 
-            except ValueError:
-                pass 
-
+                min_age = int(min_age)
+                queryset = queryset.filter(owner__age__gte=min_age)
+            except (ValueError, TypeError):
+                pass
+        
+        if max_age:
+            try:
+                max_age = int(max_age)
+                queryset = queryset.filter(owner__age__lte=max_age)
+            except (ValueError, TypeError):
+                pass
         if country:
             queryset = queryset.filter(owner__country__icontains=country)
                 ############
