@@ -27,9 +27,10 @@ class PostDetailView(generics.RetrieveUpdateDestroyAPIView):
     def retrieve(self, request, *args, **kwargs):
         instance = self.get_object()
 
-        instance.views_count = F('views_count') + 1
-        instance.save(update_fields=['views_count'])
-        instance.refresh_from_db() 
+ 
+        Post.objects.filter(pk=instance.pk).update(views_count=F('views_count') + 1)
+
+        instance.refresh_from_db()
 
         serializer = self.get_serializer(instance)
         return Response(serializer.data)
