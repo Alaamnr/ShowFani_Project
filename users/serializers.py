@@ -94,6 +94,10 @@ class CustomUserSerializer(serializers.ModelSerializer):
         return user 
 
 class ArtistProfileSerializer(serializers.ModelSerializer):
+    artistic_bio = serializers.CharField(required=False, allow_blank=True)
+    artistic_achievements = serializers.CharField(required=False, allow_blank=True)
+    what_i_need = serializers.CharField(required=False, allow_blank=True)
+    
     class Meta:
         model = Artist
         fields = ['art_section', 'artistic_bio', 'artistic_achievements', 'what_i_need']
