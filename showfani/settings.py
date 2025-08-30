@@ -228,25 +228,25 @@ LOGGING = {
     },
     'handlers': {
         'console': {
-            'level': 'DEBUG', # يمكن تغييرها لـ INFO في الإنتاج
+            'level': 'DEBUG', 
             'class': 'logging.StreamHandler',
-            'formatter': 'verbose', # استخدمي verbose هنا للحصول على تفاصيل أكثر
+            'formatter': 'verbose',
         },
     },
     'loggers': {
         'django': {
             'handlers': ['console'],
-            'level': 'DEBUG', # تأكدي أنها DEBUG أو INFO
-            'propagate': False, # لا تدعها تنتشر للـ handlers الأخرى لتجنب التكرار
+            'level': 'DEBUG', 
+            'propagate': False, 
         },
-        'django.request': { # لسجلات الطلبات والأخطاء
+        'django.request': {
             'handlers': ['console'],
-            'level': 'ERROR', # لضمان تسجيل أخطاء 500
+            'level': 'ERROR', 
             'propagate': False,
         },
-        '': { # للـ root logger، يلتقط كل السجلات
+        '': { 
             'handlers': ['console'],
-            'level': 'INFO', # يمكن تغييرها لـ DEBUG للحصول على كل شيء
+            'level': 'INFO', 
         },
     },
 }

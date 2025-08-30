@@ -57,7 +57,7 @@ class SearchHistoryView(ListAPIView):
       
         return SearchHistory.objects.filter(user=self.request.user).order_by('-searched_at')
 
-#زيادة حذف السجل 
+#زدت حذغف السجل 
 class ClearSearchHistoryView(APIView):
 
     permission_classes = [IsAuthenticated] 

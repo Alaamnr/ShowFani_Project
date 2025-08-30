@@ -73,7 +73,7 @@ class MessageListCreateView(generics.ListCreateAPIView):
             chat = Chat.objects.get(id=chat_id)
       
             if self.request.user not in chat.participants.all():
-                raise generics.PermissionDenied("أنت لست مشاركاً في هذه الدردشة.")
+                raise generics.PermissionDenied("أنت لست مشارك في هذه الدردشة.")
         except Chat.DoesNotExist:
             raise generics.NotFound("الدردشة غير موجودة.")
 
@@ -86,9 +86,9 @@ class MessageListCreateView(generics.ListCreateAPIView):
             chat = Chat.objects.get(id=chat_id)
 
             if self.request.user not in chat.participants.all():
-                raise generics.PermissionDenied("أنت لست مشاركاً في هذه الدردشة.")
+                raise generics.PermissionDenied("أنت لست مشارك في هذه الدردشة")
         except Chat.DoesNotExist:
-            raise generics.NotFound("الدردشة غير موجودة.")
+            raise generics.NotFound("الدردشة غير موجودة")
 
   
         serializer.save(sender=self.request.user, chat=chat)
