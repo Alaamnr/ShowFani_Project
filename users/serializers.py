@@ -166,8 +166,8 @@ class ChangePasswordSerializer(serializers.Serializer):
         return self.user
 
 class UserProfileDetailSerializer(serializers.ModelSerializer):
-    artist_profile = ArtistProfileSerializer(read_only=True)
-    investor_profile = InvestorProfileSerializer(read_only=True)
+    artist_profile = ArtistProfileSerializer(read_only=False)
+    investor_profile = InvestorProfileSerializer(read_only=False)
     posts = PostSerializer(many=True, read_only=True)
 
     class Meta:
