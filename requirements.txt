@@ -18,7 +18,7 @@ whitenoise==6.9.0
 
 django-cors-headers
 Pillow
-
+drf-spectacular
 django-extensions
 cloudinary
 django-cloudinary-storage
