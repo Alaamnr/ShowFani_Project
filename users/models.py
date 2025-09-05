@@ -64,7 +64,7 @@ class Artist(models.Model):
 class Investor(models.Model):
     user = models.OneToOneField(CustomUser, on_delete=models.CASCADE, primary_key=True, related_name='investor_profile')
     SUPPORT_TYPE_CHOICES = [
-        ('FINACIAL_SUPPORT', 'financial_support'),
+        ('FINANCIAL_SUPPORT', 'financial_support'),
         ('OTHER', 'Other'),
     ]
     ART_SECTION_CHOICES = [
