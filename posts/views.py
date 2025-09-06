@@ -2,7 +2,7 @@
 from rest_framework import generics, status
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated, AllowAny
-from .models import Post
+from .models import Post, PostView 
 from .serializers import PostSerializer
 from django.db.models import F
 from rest_framework.views import APIView
@@ -28,7 +28,9 @@ class PostDetailView(generics.RetrieveUpdateDestroyAPIView):
         instance = self.get_object()
 
  
-        Post.objects.filter(pk=instance.pk).update(views_count=F('views_count') + 1)
+        if request.user.is_authenticated and not PostView.objects.filter(post=instance, user=request.user).exists():
+            PostView.objects.create(post=instance, user=request.user)
+            Post.objects.filter(pk=instance.pk).update(views_count=F('views_count') + 1)
 
         instance.refresh_from_db()
 

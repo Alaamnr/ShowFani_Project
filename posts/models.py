@@ -26,6 +26,7 @@ class Post(models.Model):
 
     class Meta:
         ordering = ['-created_at']
+        
 
     def clean(self):
     
@@ -35,3 +36,11 @@ class Post(models.Model):
 
     def __str__(self):
         return f"Post by {self.owner.username} - {self.art_section}"
+class PostView(models.Model):
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    post = models.ForeignKey('Post', on_delete=models.CASCADE)
+    viewed_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+  
+        unique_together = ('user', 'post')
