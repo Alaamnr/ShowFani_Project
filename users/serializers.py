@@ -219,5 +219,5 @@ class UserProfileDetailSerializer(serializers.ModelSerializer):
 class UserSearchResultSerializer(serializers.ModelSerializer):
     class Meta:
         model = CustomUser
-        fields = ['username', 'full_name', 'profile_picture', 'user_type', 'country']
+        fields = ['id', 'username', 'full_name', 'profile_picture', 'user_type', 'country']
         read_only_fields = [ 'full_name', 'profile_picture', 'user_type', 'country']
