@@ -21,9 +21,9 @@ class CustomUserAdmin(UserAdmin):
 @admin.register(Artist)
 class ArtistAdmin(admin.ModelAdmin):
 
-    list_display = ('user_username', 'user_full_name', 'artist_cv', 'what_i_need') 
+    list_display = ('user_username', 'user_full_name', 'art_cv', 'what_i_need') 
 
-    search_fields = ('user__username', 'user__full_name', 'art_section', 'artist_cv')
+    search_fields = ('user__username', 'user__full_name', 'art_section', 'art_cv')
 
     list_filter = ('art_section',)
 

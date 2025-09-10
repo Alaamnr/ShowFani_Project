@@ -100,7 +100,7 @@ class ArtistProfileSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Artist
-        fields = ['art_section', 'artistic_bio', 'artistic_achievements', 'what_i_need']
+        fields = ['art_section', 'art_cv',  'what_i_need']
 
 class InvestorProfileSerializer(serializers.ModelSerializer):
     class Meta:
