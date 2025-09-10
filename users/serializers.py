@@ -166,8 +166,9 @@ class ChangePasswordSerializer(serializers.Serializer):
         return self.user
 
 class UserProfileDetailSerializer(serializers.ModelSerializer):
-    artist_profile = ArtistProfileSerializer(read_only=False)
-    investor_profile = InvestorProfileSerializer(read_only=False)
+
+    artist_profile = ArtistProfileSerializer(required=False, allow_null=True) 
+    investor_profile = InvestorProfileSerializer(required=False, allow_null=True)
     posts = PostSerializer(many=True, read_only=True)
 
     class Meta:
@@ -202,18 +203,33 @@ class UserProfileDetailSerializer(serializers.ModelSerializer):
 
     def update(self, instance, validated_data):
         validated_data.pop('user_type', None)
+
+
+        artist_profile_data = validated_data.pop('artist_profile', None)
+        investor_profile_data = validated_data.pop('investor_profile', None)
+
+
         instance = super().update(instance, validated_data)
 
-        if hasattr(instance, 'artist_profile'):
-            artist_profile_data = validated_data.pop('artist_profile', {})
+        if artist_profile_data and hasattr(instance, 'artist_profile') and instance.artist_profile:
             artist_serializer = ArtistProfileSerializer(instance.artist_profile, data=artist_profile_data, partial=True)
             if artist_serializer.is_valid(raise_exception=True):
                 artist_serializer.save()
-        elif hasattr(instance, 'investor_profile'):
-            investor_profile_data = validated_data.pop('investor_profile', {})
+        elif artist_profile_data and hasattr(instance, 'artist_profile') and not instance.artist_profile:
+            # في حالة لم يكن هناك Artist profile موجود ولكن تم إرسال بيانات له، يمكن إنشاؤه
+            # هذه الحالة نادرة بعد التسجيل حيث يجب أن يكون البروفايل موجود
+            Artist.objects.create(user=instance, **artist_profile_data)
+
+
+  
+        if investor_profile_data and hasattr(instance, 'investor_profile') and instance.investor_profile:
             investor_serializer = InvestorProfileSerializer(instance.investor_profile, data=investor_profile_data, partial=True)
             if investor_serializer.is_valid(raise_exception=True):
                 investor_serializer.save()
+        elif investor_profile_data and hasattr(instance, 'investor_profile') and not instance.investor_profile:
+
+            Investor.objects.create(user=instance, **investor_profile_data)
+
         return instance
 
 class UserSearchResultSerializer(serializers.ModelSerializer):
