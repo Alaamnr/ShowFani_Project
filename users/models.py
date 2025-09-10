@@ -52,8 +52,8 @@ class Artist(models.Model):
         ('OTHER', 'Other'),
     ]
     art_section = models.CharField(max_length=50, choices=ART_SECTION_CHOICES, blank=True, null=True)
-    art_cv = models.TextField(blank=True, null=True)
-
+    artistic_bio = models.TextField(blank=True, null=True)
+    artistic_achievements = models.TextField(blank=True, null=True)
   
     what_i_need = models.TextField(blank=True, null=True) 
  
